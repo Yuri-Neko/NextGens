@@ -393,6 +393,15 @@ shards:
       - "&7Used to upgrade a maxed-out"
       - "&7Nether generator into its"
       - "&7first The End tier."
+  shard-of-greenland:
+    material: RED_DYE
+    display-name: "&c&lShard Of GreenLand"
+    lore:
+      - "&7A fragment of Overworld energy."
+      - "&7Used as an optional upgrade cost"
+      - "&7for Overworld generators, same as"
+      - "&7Shard Of Nether / Shard Of The End"
+      - "&7are for their own dimensions."
 
 messages:
   no-permission: '&6[NextGens] &cYou don''t have permission'
@@ -418,6 +427,8 @@ messages:
   invalid-world: '&6[NextGens] &cYou are not allowed to place generator here!'
   wrong-dimension: '&6[NextGens] &c{gen} can only be placed in the {dimension}!'
   not-enough-shard: '&6[NextGens] &cYou need &e{required}x {shard} &cto upgrade this generator! &7(you have: {owned})'
+  not-enough-level-gens: '&6[NextGens] &cYou need to be at least level &e{required} &cto upgrade this generator! &7(your level: {level})'
+  not-enough-prestige-gens: '&6[NextGens] &cYou need at least &d{required} prestige &cto upgrade this generator! &7(your prestige: {prestige})'
   generator-given-inventory: '&6[NextGens] &a{previous} &7-> &a{current} &7- can''t be placed in this dimension, so it was given to your inventory instead. Go place it in the {dimension}!'
   invalid-shard-type: '&6[NextGens] &cInvalid shard type! Use &enether &cor &eend&c.'
   give-shard: '&6[NextGens] &aYou gave &e{amount}x {shard} &ato &e{player}'

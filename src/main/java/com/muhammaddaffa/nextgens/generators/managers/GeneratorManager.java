@@ -423,6 +423,11 @@ public class GeneratorManager {
         double upgradeCost = section.getDouble("upgrade.upgrade-cost");
         int netherShardCost = section.getInt("upgrade.shard-cost.nether", 0);
         int endShardCost = section.getInt("upgrade.shard-cost.end", 0);
+        int greenlandShardCost = section.getInt("upgrade.shard-cost.greenland", 0);
+        // Requires NextGensLevels (hard dependency) - see LevelsRequirementHook.
+        int requireLevel = section.getInt("upgrade.require-level", 0);
+        int reduceLevel = section.getInt("upgrade.reduce-level", 0);
+        int requirePrestige = section.getInt("upgrade.require-prestige", 0);
         // online only options
         Boolean onlineOnly;
         if (section.get("online-only") == null) {
@@ -485,7 +490,8 @@ public class GeneratorManager {
         List<GensRequirement> upgradeRequirements = this.loadRequirement(section, "upgrade-requirements");
 
         Generator generator = new Generator(id, displayName, worldType, interval, item, drops, nextTier, upgradeCost,
-                netherShardCost, endShardCost, corrupted, fixCost, corruptChance, onlineOnly, placeRequirements, upgradeRequirements);
+                netherShardCost, endShardCost, greenlandShardCost, requireLevel, reduceLevel, requirePrestige,
+                corrupted, fixCost, corruptChance, onlineOnly, placeRequirements, upgradeRequirements);
 
         // call the custom event
         GeneratorLoadEvent loadEvent = new GeneratorLoadEvent(generator);

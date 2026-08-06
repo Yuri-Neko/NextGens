@@ -18,7 +18,7 @@ public class GiveShardCommand {
     public static void handle(RoutedCommand.CommandPlan plan, ShardManager shardManager) {
         plan.perm("nextgens.admin")
                 .arg("target", new OnlinePlayerArg())
-                .arg("type", new StringArg(), ArgSuggester.ofDynamic((sender, prefix) -> List.of("nether", "end")))
+                .arg("type", new StringArg(), ArgSuggester.ofDynamic((sender, prefix) -> List.of("nether", "end", "greenland")))
                 .argOptional("amount", new IntArg())
                 .exec((sender, ctx) -> {
                     Player target = ctx.get("target", Player.class);
@@ -26,7 +26,8 @@ public class GiveShardCommand {
                     Integer amount = ctx.get("amount", Integer.class);
 
                     ShardType type = "end".equalsIgnoreCase(typeArg) ? ShardType.END
-                            : "nether".equalsIgnoreCase(typeArg) ? ShardType.NETHER : null;
+                            : "nether".equalsIgnoreCase(typeArg) ? ShardType.NETHER
+                            : "greenland".equalsIgnoreCase(typeArg) ? ShardType.GREENLAND : null;
                     if (type == null) {
                         NextGens.DEFAULT_CONFIG.sendMessage(sender, "messages.invalid-shard-type");
                         return;

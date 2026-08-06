@@ -15,7 +15,7 @@ import com.muhammaddaffa.nextgens.generators.Drop;
 import com.muhammaddaffa.nextgens.generators.Generator;
 import com.muhammaddaffa.nextgens.generators.managers.GeneratorManager;
 import com.muhammaddaffa.nextgens.hooks.armor.ArmorSpeedHook;
-import com.muhammaddaffa.nextgens.hooks.levels.LevelsSpeedHook;
+import com.muhammaddaffa.nextgens.hooks.levels.NextGensLevelsHook;
 import com.muhammaddaffa.nextgens.users.models.User;
 import com.muhammaddaffa.nextgens.users.UserManager;
 import com.muhammaddaffa.nextgens.utils.GensRunnable;
@@ -151,9 +151,9 @@ public class GeneratorTask extends GensRunnable {
             }
             /**
              * NextGensLevels prestige speed bonus (lewat reflection, opsional) -
-             * lihat LevelsSpeedHook untuk detail.
+             * lihat NextGensLevelsHook untuk detail.
              */
-            double prestigeSpeedPercent = LevelsSpeedHook.getSpeedBonusPercent(active.getOwner());
+            double prestigeSpeedPercent = NextGensLevelsHook.getSpeedBonusPercent(active.getOwner());
             if (prestigeSpeedPercent > 0) {
                 double discount = (generator.interval() * prestigeSpeedPercent) / 100;
                 interval -= discount;

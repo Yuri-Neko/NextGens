@@ -10,6 +10,7 @@ import com.muhammaddaffa.nextgens.NextGens;
 import com.muhammaddaffa.nextgens.api.events.generators.GeneratorUpgradeEvent;
 import com.muhammaddaffa.nextgens.generators.ActiveGenerator;
 import com.muhammaddaffa.nextgens.generators.Generator;
+import com.muhammaddaffa.nextgens.hooks.levels.NextGensLevelsHook;
 import com.muhammaddaffa.nextgens.shards.ShardManager;
 import com.muhammaddaffa.nextgens.shards.ShardType;
 import com.muhammaddaffa.nextgens.utils.Utils;
@@ -64,7 +65,29 @@ public class GeneratorUpdateHelper {
             Utils.bassSound(player);
             return false;
         }
-        // Shard cost check (cross-dimension upgrades, e.g. max Overworld -> first Nether tier)
+        // Level / prestige gates (require NextGensLevels - hard dependency, see plugin.yml)
+        if (generator.requireLevel() > 0) {
+            int level = NextGensLevelsHook.getLevel(player.getUniqueId());
+            if (level < generator.requireLevel()) {
+                NextGens.DEFAULT_CONFIG.sendMessage(player, "messages.not-enough-level-gens", new Placeholder()
+                        .add("{required}", generator.requireLevel())
+                        .add("{level}", level));
+                Utils.bassSound(player);
+                return false;
+            }
+        }
+        if (generator.requirePrestige() > 0) {
+            int prestige = NextGensLevelsHook.getPrestige(player.getUniqueId());
+            if (prestige < generator.requirePrestige()) {
+                NextGens.DEFAULT_CONFIG.sendMessage(player, "messages.not-enough-prestige-gens", new Placeholder()
+                        .add("{required}", generator.requirePrestige())
+                        .add("{prestige}", prestige));
+                Utils.bassSound(player);
+                return false;
+            }
+        }
+        // Shard cost check (cross-dimension upgrades, e.g. max Overworld -> first Nether tier,
+        // and/or a plain optional cost on any generator via shard-cost.greenland)
         ShardManager shardManager = NextGens.getInstance().getShardManager();
         if (generator.netherShardCost() > 0
                 && !hasEnoughShard(player, shardManager, ShardType.NETHER, generator.netherShardCost())) {
@@ -72,6 +95,10 @@ public class GeneratorUpdateHelper {
         }
         if (generator.endShardCost() > 0
                 && !hasEnoughShard(player, shardManager, ShardType.END, generator.endShardCost())) {
+            return false;
+        }
+        if (generator.greenlandShardCost() > 0
+                && !hasEnoughShard(player, shardManager, ShardType.GREENLAND, generator.greenlandShardCost())) {
             return false;
         }
         // call the custom events
@@ -88,6 +115,13 @@ public class GeneratorUpdateHelper {
         }
         if (generator.endShardCost() > 0) {
             shardManager.removeFromInventory(player.getInventory(), ShardType.END, generator.endShardCost());
+        }
+        if (generator.greenlandShardCost() > 0) {
+            shardManager.removeFromInventory(player.getInventory(), ShardType.GREENLAND, generator.greenlandShardCost());
+        }
+        // reduce level, if this upgrade costs one (does NOT touch exp - see NextGensLevelsHook)
+        if (generator.reduceLevel() > 0) {
+            NextGensLevelsHook.reduceLevel(player.getUniqueId(), generator.reduceLevel());
         }
         // If the next tier can't be placed in this world (e.g. upgrading a maxed-out
         // Overworld generator into the first Nether-only tier), it can't just replace

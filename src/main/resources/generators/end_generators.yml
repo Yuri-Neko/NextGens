@@ -2,7 +2,7 @@
 # Tier 10 (dragonegg_generator) is the final tier overall - no further
 # upgrade (next-generator: null).
 
-chorusfruit_generator:
+end_chorusfruit_generator:
   display-name: "&d&lChorus Fruit Generator"
   world-type: THE_END
   interval: 20
@@ -11,7 +11,7 @@ chorusfruit_generator:
     cost: 550
     chance: 0.3
   upgrade:
-    next-generator: poppedchorus_generator
+    next-generator: end_poppedchorus_generator
     upgrade-cost: 35000000
   item:
     material: CHORUS_FRUIT
@@ -39,7 +39,7 @@ chorusfruit_generator:
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$11000"
 
-poppedchorus_generator:
+end_poppedchorus_generator:
   display-name: "&5&lPopped Chorus Fruit Generator"
   world-type: THE_END
   interval: 20
@@ -48,7 +48,7 @@ poppedchorus_generator:
     cost: 650
     chance: 0.29
   upgrade:
-    next-generator: endstone_generator
+    next-generator: end_endstone_generator
     upgrade-cost: 55000000
   item:
     material: POPPED_CHORUS_FRUIT
@@ -76,7 +76,7 @@ poppedchorus_generator:
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$15000"
 
-endstone_generator:
+end_endstone_generator:
   display-name: "&f&lEnd Stone Generator"
   world-type: THE_END
   interval: 20
@@ -85,7 +85,7 @@ endstone_generator:
     cost: 780
     chance: 0.28
   upgrade:
-    next-generator: purpur_generator
+    next-generator: end_purpur_generator
     upgrade-cost: 85000000
   item:
     material: END_STONE
@@ -113,7 +113,7 @@ endstone_generator:
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$20000"
 
-purpur_generator:
+end_purpur_generator:
   display-name: "&d&lPurpur Generator"
   world-type: THE_END
   interval: 20
@@ -122,7 +122,7 @@ purpur_generator:
     cost: 940
     chance: 0.27
   upgrade:
-    next-generator: enderpearl_generator
+    next-generator: end_enderpearl_generator
     upgrade-cost: 130000000
   item:
     material: PURPUR_BLOCK
@@ -150,7 +150,7 @@ purpur_generator:
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$27000"
 
-enderpearl_generator:
+end_enderpearl_generator:
   display-name: "&2&lEnder Pearl Generator"
   world-type: THE_END
   interval: 20
@@ -159,7 +159,7 @@ enderpearl_generator:
     cost: 1130
     chance: 0.26
   upgrade:
-    next-generator: endereye_generator
+    next-generator: end_endereye_generator
     upgrade-cost: 200000000
   item:
     material: ENDER_PEARL
@@ -187,7 +187,7 @@ enderpearl_generator:
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$36000"
 
-endereye_generator:
+end_endereye_generator:
   display-name: "&2&lEnder Eye Generator"
   world-type: THE_END
   interval: 20
@@ -196,7 +196,7 @@ endereye_generator:
     cost: 1360
     chance: 0.25
   upgrade:
-    next-generator: shulkershell_generator
+    next-generator: end_shulkershell_generator
     upgrade-cost: 300000000
   item:
     material: ENDER_EYE
@@ -224,7 +224,7 @@ endereye_generator:
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$48000"
 
-shulkershell_generator:
+end_shulkershell_generator:
   display-name: "&5&lShulker Shell Generator"
   world-type: THE_END
   interval: 20
@@ -233,7 +233,7 @@ shulkershell_generator:
     cost: 1630
     chance: 0.23
   upgrade:
-    next-generator: dragonbreath_generator
+    next-generator: end_dragonbreath_generator
     upgrade-cost: 450000000
   item:
     material: SHULKER_SHELL
@@ -261,7 +261,7 @@ shulkershell_generator:
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$65000"
 
-dragonbreath_generator:
+end_dragonbreath_generator:
   display-name: "&d&lDragon's Breath Generator"
   world-type: THE_END
   interval: 20
@@ -270,7 +270,7 @@ dragonbreath_generator:
     cost: 1960
     chance: 0.21
   upgrade:
-    next-generator: endcrystal_generator
+    next-generator: end_endcrystal_generator
     upgrade-cost: 650000000
   item:
     material: DRAGON_BREATH
@@ -298,7 +298,7 @@ dragonbreath_generator:
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$88000"
 
-endcrystal_generator:
+end_endcrystal_generator:
   display-name: "&f&lEnd Crystal Generator"
   world-type: THE_END
   interval: 20
@@ -307,7 +307,7 @@ endcrystal_generator:
     cost: 2350
     chance: 0.19
   upgrade:
-    next-generator: dragonegg_generator
+    next-generator: end_dragonegg_generator
     upgrade-cost: 900000000
   item:
     material: END_CRYSTAL
@@ -335,7 +335,7 @@ endcrystal_generator:
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$120000"
 
-dragonegg_generator:
+end_dragonegg_generator:
   display-name: "&5&lDragon Egg Generator"
   world-type: THE_END
   interval: 20

@@ -305,5 +305,15 @@
             <scope>system</scope>
             <systemPath>${project.basedir}/libs/FancyHolograms-2.11.0.jar</systemPath>
         </dependency>
+
+        <!-- NextGensLevels - hard dependency, see plugin.yml "depend". Bundled the same
+             way NextGensLevels itself bundles NextGens.jar (no public repo for either). -->
+        <dependency>
+            <groupId>com.nextgens</groupId>
+            <artifactId>NextGensLevels</artifactId>
+            <version>1.0.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/NextGensLevels.jar</systemPath>
+        </dependency>
     </dependencies>
 </project>

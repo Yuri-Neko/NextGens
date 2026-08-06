@@ -5,7 +5,7 @@
 # Shard Of The End to upgrade into the first End tier (chorusfruit_generator,
 # see end_generators.yml).
 
-netherwart_generator:
+nt_netherwart_generator:
   display-name: "&4&lNether Wart Generator"
   world-type: NETHER
   interval: 20
@@ -14,7 +14,7 @@ netherwart_generator:
     cost: 85
     chance: 0.28
   upgrade:
-    next-generator: soulsand_generator
+    next-generator: nt_soulsand_generator
     upgrade-cost: 150000
     shard-cost:
       nether: 2
@@ -44,7 +44,7 @@ netherwart_generator:
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$450"
 
-soulsand_generator:
+nt_soulsand_generator:
   display-name: "&8&lSoul Sand Generator"
   world-type: NETHER
   interval: 20
@@ -53,7 +53,7 @@ soulsand_generator:
     cost: 100
     chance: 0.27
   upgrade:
-    next-generator: glowstone_generator
+    next-generator: nt_glowstone_generator
     upgrade-cost: 300000
     shard-cost:
       nether: 2
@@ -83,7 +83,7 @@ soulsand_generator:
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$650"
 
-glowstone_generator:
+nt_glowstone_generator:
   display-name: "&e&lGlowstone Generator"
   world-type: NETHER
   interval: 20
@@ -92,7 +92,7 @@ glowstone_generator:
     cost: 120
     chance: 0.26
   upgrade:
-    next-generator: quartz_generator
+    next-generator: nt_quartz_generator
     upgrade-cost: 550000
     shard-cost:
       nether: 3
@@ -122,7 +122,7 @@ glowstone_generator:
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$900"
 
-quartz_generator:
+nt_quartz_generator:
   display-name: "&f&lQuartz Generator"
   world-type: NETHER
   interval: 20
@@ -131,7 +131,7 @@ quartz_generator:
     cost: 145
     chance: 0.25
   upgrade:
-    next-generator: magmacream_generator
+    next-generator: nt_magmacream_generator
     upgrade-cost: 950000
     shard-cost:
       nether: 3
@@ -161,7 +161,7 @@ quartz_generator:
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$1300"
 
-magmacream_generator:
+nt_magmacream_generator:
   display-name: "&c&lMagma Cream Generator"
   world-type: NETHER
   interval: 20
@@ -170,7 +170,7 @@ magmacream_generator:
     cost: 175
     chance: 0.24
   upgrade:
-    next-generator: blazepowder_generator
+    next-generator: nt_blazepowder_generator
     upgrade-cost: 1600000
     shard-cost:
       nether: 3
@@ -200,7 +200,7 @@ magmacream_generator:
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$1800"
 
-blazepowder_generator:
+nt_blazepowder_generator:
   display-name: "&e&lBlaze Powder Generator"
   world-type: NETHER
   interval: 20
@@ -209,7 +209,7 @@ blazepowder_generator:
     cost: 210
     chance: 0.23
   upgrade:
-    next-generator: crimsonfungus_generator
+    next-generator: nt_crimsonfungus_generator
     upgrade-cost: 2700000
     shard-cost:
       nether: 4
@@ -239,7 +239,7 @@ blazepowder_generator:
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$2500"
 
-crimsonfungus_generator:
+nt_crimsonfungus_generator:
   display-name: "&c&lCrimson Fungus Generator"
   world-type: NETHER
   interval: 20
@@ -248,7 +248,7 @@ crimsonfungus_generator:
     cost: 255
     chance: 0.22
   upgrade:
-    next-generator: nethergold_generator
+    next-generator: nt_nethergold_generator
     upgrade-cost: 4500000
     shard-cost:
       nether: 4
@@ -278,7 +278,7 @@ crimsonfungus_generator:
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$3400"
 
-nethergold_generator:
+nt_nethergold_generator:
   display-name: "&6&lNether Gold Generator"
   world-type: NETHER
   interval: 20
@@ -287,7 +287,7 @@ nethergold_generator:
     cost: 305
     chance: 0.21
   upgrade:
-    next-generator: ancientdebris_generator
+    next-generator: nt_ancientdebris_generator
     upgrade-cost: 7500000
     shard-cost:
       nether: 4
@@ -317,7 +317,7 @@ nethergold_generator:
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$4600"
 
-ancientdebris_generator:
+nt_ancientdebris_generator:
   display-name: "&8&lAncient Debris Generator"
   world-type: NETHER
   interval: 20
@@ -326,7 +326,7 @@ ancientdebris_generator:
     cost: 370
     chance: 0.2
   upgrade:
-    next-generator: netherite_generator
+    next-generator: nt_netherite_generator
     upgrade-cost: 12500000
     shard-cost:
       nether: 5
@@ -356,7 +356,7 @@ ancientdebris_generator:
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$6200"
 
-netherite_generator:
+nt_netherite_generator:
   display-name: "&8&lNetherite Generator"
   world-type: NETHER
   interval: 20
@@ -365,7 +365,7 @@ netherite_generator:
     cost: 450
     chance: 0.18
   upgrade:
-    next-generator: chorusfruit_generator
+    next-generator: end_chorusfruit_generator
     upgrade-cost: 20000000
     shard-cost:
       end: 5

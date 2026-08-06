@@ -4,7 +4,7 @@
 # since that generator can't be placed in the Overworld, upgrading it there
 # gives the item straight to the player's inventory instead of placing it.
 
-wheat_generator:
+ow_wheat_generator:
   display-name: "&e&lWheat Generator"
   world-type: OVERWORLD
   interval: 20
@@ -13,7 +13,7 @@ wheat_generator:
     cost: 12.5
     chance: 0.25
   upgrade:
-    next-generator: carrot_generator
+    next-generator: ow_carrot_generator
     upgrade-cost: 50
   item:
     material: WHEAT
@@ -41,7 +41,7 @@ wheat_generator:
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$8"
 
-carrot_generator:
+ow_carrot_generator:
   display-name: "&6&lCarrot Generator"
   world-type: OVERWORLD
   interval: 20
@@ -50,7 +50,7 @@ carrot_generator:
     cost: 15
     chance: 0.24
   upgrade:
-    next-generator: potato_generator
+    next-generator: ow_potato_generator
     upgrade-cost: 150
   item:
     material: CARROT
@@ -78,7 +78,7 @@ carrot_generator:
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$12"
 
-potato_generator:
+ow_potato_generator:
   display-name: "&f&lPotato Generator"
   world-type: OVERWORLD
   interval: 20
@@ -87,7 +87,7 @@ potato_generator:
     cost: 18
     chance: 0.23
   upgrade:
-    next-generator: sugarcane_generator
+    next-generator: ow_sugarcane_generator
     upgrade-cost: 400
   item:
     material: POTATO
@@ -115,7 +115,7 @@ potato_generator:
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$18"
 
-sugarcane_generator:
+ow_sugarcane_generator:
   display-name: "&a&lSugar Cane Generator"
   world-type: OVERWORLD
   interval: 20
@@ -124,7 +124,7 @@ sugarcane_generator:
     cost: 22
     chance: 0.22
   upgrade:
-    next-generator: pumpkin_generator
+    next-generator: ow_pumpkin_generator
     upgrade-cost: 900
   item:
     material: SUGAR_CANE
@@ -152,7 +152,7 @@ sugarcane_generator:
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$27"
 
-pumpkin_generator:
+ow_pumpkin_generator:
   display-name: "&6&lPumpkin Generator"
   world-type: OVERWORLD
   interval: 20
@@ -161,7 +161,7 @@ pumpkin_generator:
     cost: 27
     chance: 0.21
   upgrade:
-    next-generator: melon_generator
+    next-generator: ow_melon_generator
     upgrade-cost: 2000
   item:
     material: PUMPKIN
@@ -189,7 +189,7 @@ pumpkin_generator:
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$40"
 
-melon_generator:
+ow_melon_generator:
   display-name: "&2&lMelon Generator"
   world-type: OVERWORLD
   interval: 20
@@ -198,7 +198,7 @@ melon_generator:
     cost: 33
     chance: 0.2
   upgrade:
-    next-generator: cactus_generator
+    next-generator: ow_cactus_generator
     upgrade-cost: 4500
   item:
     material: MELON
@@ -226,7 +226,7 @@ melon_generator:
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$60"
 
-cactus_generator:
+ow_cactus_generator:
   display-name: "&2&lCactus Generator"
   world-type: OVERWORLD
   interval: 20
@@ -235,7 +235,7 @@ cactus_generator:
     cost: 40
     chance: 0.19
   upgrade:
-    next-generator: bamboo_generator
+    next-generator: ow_bamboo_generator
     upgrade-cost: 10000
   item:
     material: CACTUS
@@ -263,7 +263,7 @@ cactus_generator:
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$90"
 
-bamboo_generator:
+ow_bamboo_generator:
   display-name: "&a&lBamboo Generator"
   world-type: OVERWORLD
   interval: 20
@@ -272,8 +272,9 @@ bamboo_generator:
     cost: 48
     chance: 0.18
   upgrade:
-    next-generator: cocoa_generator
+    next-generator: ow_cocoa_generator
     upgrade-cost: 22000
+    require-level: 8
   item:
     material: BAMBOO
     display-name: "&a&lBamboo Generator"
@@ -300,7 +301,7 @@ bamboo_generator:
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$135"
 
-cocoa_generator:
+ow_cocoa_generator:
   display-name: "&6&lCocoa Bean Generator"
   world-type: OVERWORLD
   interval: 20
@@ -309,8 +310,11 @@ cocoa_generator:
     cost: 58
     chance: 0.17
   upgrade:
-    next-generator: golden_apple_generator
+    next-generator: ow_golden_apple_generator
     upgrade-cost: 48000
+    require-prestige: 1
+    shard-cost:
+      greenland: 3
   item:
     material: COCOA_BEANS
     display-name: "&6&lCocoa Bean Generator"
@@ -337,7 +341,7 @@ cocoa_generator:
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$200"
 
-golden_apple_generator:
+ow_golden_apple_generator:
   display-name: "&e&lGolden Apple Generator"
   world-type: OVERWORLD
   interval: 20
@@ -346,7 +350,7 @@ golden_apple_generator:
     cost: 70
     chance: 0.15
   upgrade:
-    next-generator: netherwart_generator
+    next-generator: nt_netherwart_generator
     upgrade-cost: 100000
     shard-cost:
       nether: 5

@@ -5,7 +5,8 @@ import org.bukkit.Material;
 public enum ShardType {
 
     NETHER("Shard Of Nether", "shard-of-nether", Material.NETHER_STAR),
-    END("Shard Of The End", "shard-of-the-end", Material.ECHO_SHARD);
+    END("Shard Of The End", "shard-of-the-end", Material.ECHO_SHARD),
+    GREENLAND("Shard Of GreenLand", "shard-of-greenland", Material.RED_DYE);
 
     private final String defaultName;
     private final String configKey;
