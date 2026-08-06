@@ -31,6 +31,57 @@ wheat_generator:
       placeholder: "%alonsolevels_levels%"
       value: "90"
 
+  # =====================================================
+  # Using NextGensLevels? Its placeholders work here too, exactly like
+  # any other PlaceholderAPI placeholder (see '1' above) - just point
+  # 'placeholder' at one of the following and 'value' at your threshold:
+  #   %nextgenslevels_level%            - player's current level
+  #   %nextgenslevels_prestige%         - player's current prestige
+  #   %nextgenslevels_exp%              - current exp towards next level
+  #   %nextgenslevels_exp_needed%       - exp needed for the next level
+  #   %nextgenslevels_exp_percentage%   - progress to next level, 0-100
+  #
+  # This is a SEPARATE, alternative way to gate an upgrade on minimum
+  # prestige from NextGensLevels' own "require-prestige" (in its own
+  # config.yml) - use whichever is more convenient; both work fine at
+  # the same time if you want, since one lives in this file and the
+  # other in NextGensLevels' config, they don't conflict.
+  #
+  # Example - gating minimum prestige at several tiers (put the block
+  # matching each generator's OWN tier under that generator's own
+  # upgrade-requirements, not all on one generator):
+  #
+  #   wheat_generator (tier 1, upgrading out of it needs prestige >= 1):
+  #     upgrade-requirements:
+  #       '0':
+  #         type: PLACEHOLDER
+  #         message: "&4&l[!] &cYou need at least Prestige 1 to upgrade this generator!"
+  #         placeholder: "%nextgenslevels_prestige%"
+  #         value: "1"
+  #
+  #   melon_generator (tier 2, needs prestige >= 2):
+  #     upgrade-requirements:
+  #       '0':
+  #         type: PLACEHOLDER
+  #         message: "&4&l[!] &cYou need at least Prestige 2 to upgrade this generator!"
+  #         placeholder: "%nextgenslevels_prestige%"
+  #         value: "2"
+  #
+  #   (some higher-tier generator, needs prestige >= 5):
+  #     upgrade-requirements:
+  #       '0':
+  #         type: PLACEHOLDER
+  #         message: "&4&l[!] &cYou need at least Prestige 5 to upgrade this generator!"
+  #         placeholder: "%nextgenslevels_prestige%"
+  #         value: "5"
+  # =====================================================
+  upgrade-requirements: # Either 'place-requirements' or 'upgrade-requirements'
+    '0':
+      type: PLACEHOLDER
+      message: "&4&l[!] &cYou need at least Prestige 1 to upgrade this generator!"
+      placeholder: "%nextgenslevels_prestige%"
+      value: "1"
+
 
   # The generator item
   item:
