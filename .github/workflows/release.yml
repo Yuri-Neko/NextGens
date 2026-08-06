@@ -1,0 +1,67 @@
+name: Release on version bump
+
+# Fires only when pom.xml changes on master. Compares the project's <version>
+# against the previous commit's pom.xml - if it changed, builds the plugin and
+# publishes a GitHub Release (tag vX.Y.Z) with the jar attached. If pom.xml
+# changed for some other reason (a dependency version, etc.) and the project
+# version itself is the same, nothing happens.
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - 'pom.xml'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Check if project version changed
+        id: check
+        run: |
+          CURRENT=$(xmllint --xpath "string(/*[local-name()='project']/*[local-name()='version'])" pom.xml)
+          git show HEAD~1:pom.xml > /tmp/previous_pom.xml 2>/dev/null || echo "<project/>" > /tmp/previous_pom.xml
+          PREVIOUS=$(xmllint --xpath "string(/*[local-name()='project']/*[local-name()='version'])" /tmp/previous_pom.xml 2>/dev/null || echo "")
+          echo "Current version: $CURRENT / Previous version: $PREVIOUS"
+          echo "version=$CURRENT" >> "$GITHUB_OUTPUT"
+          if [ "$CURRENT" != "$PREVIOUS" ] && [ -n "$CURRENT" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Set up JDK 21
+        if: steps.check.outputs.changed == 'true'
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Build with Maven
+        if: steps.check.outputs.changed == 'true'
+        run: mvn -B -DskipTests clean package
+
+      - name: Locate built jar
+        if: steps.check.outputs.changed == 'true'
+        id: jar
+        run: |
+          JAR_PATH=$(find target -maxdepth 1 -name '*.jar' ! -name 'original-*.jar' ! -name '*-sources.jar' ! -name '*-javadoc.jar' | head -n1)
+          echo "Found jar: $JAR_PATH"
+          echo "path=$JAR_PATH" >> "$GITHUB_OUTPUT"
+
+      - name: Create GitHub Release
+        if: steps.check.outputs.changed == 'true'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.check.outputs.version }}
+          name: v${{ steps.check.outputs.version }}
+          generate_release_notes: true
+          files: ${{ steps.jar.outputs.path }}

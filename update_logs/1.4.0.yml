@@ -1,0 +1,6 @@
+
+[!] BREAKING: NextGensLevels is now a hard dependency (see plugin.yml) - NextGens will not start without it installed
+[+] Generator upgrade requirements (require-level, reduce-level, require-prestige) are now native fields in generators.yml, no NextGensLevels config needed
+[+] Add Shard Of GreenLand (Overworld) alongside Shard Of Nether / Shard Of The End - three unified shard types for gating generator upgrades
+[+] Add 30 example generators across Overworld/Nether/The End (10 each), with world-restricted placement and cross-dimension upgrade support (generator given to inventory instead of placed if it can't go in the current dimension)
+[+] Add /nextgens giveshard <player> <nether|end|greenland> <amount>
