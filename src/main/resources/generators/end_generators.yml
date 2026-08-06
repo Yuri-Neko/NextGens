@@ -1,0 +1,373 @@
+# The End generator line (10 tiers) - place-able only in The End.
+# Tier 10 (dragonegg_generator) is the final tier overall - no further
+# upgrade (next-generator: null).
+
+chorusfruit_generator:
+  display-name: "&d&lChorus Fruit Generator"
+  world-type: THE_END
+  interval: 20
+  corrupted:
+    enabled: true
+    cost: 550
+    chance: 0.3
+  upgrade:
+    next-generator: poppedchorus_generator
+    upgrade-cost: 35000000
+  item:
+    material: CHORUS_FRUIT
+    display-name: "&d&lChorus Fruit Generator"
+    enchantments: [ ]
+    flags: [ ]
+    custom-model-data: 0
+    lore:
+      - "&8The End Generator - Tier 1"
+      - "&7"
+      - "&7&oPlace down to activate the generator"
+  drops:
+    '0':
+      chance: 100
+      sell-value: 11000
+      commands: [ ]
+      item:
+        material: CHORUS_FRUIT
+        display-name: "&dChorus Fruit &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - The End Tier 1"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$11000"
+
+poppedchorus_generator:
+  display-name: "&5&lPopped Chorus Fruit Generator"
+  world-type: THE_END
+  interval: 20
+  corrupted:
+    enabled: true
+    cost: 650
+    chance: 0.29
+  upgrade:
+    next-generator: endstone_generator
+    upgrade-cost: 55000000
+  item:
+    material: POPPED_CHORUS_FRUIT
+    display-name: "&5&lPopped Chorus Fruit Generator"
+    enchantments: [ ]
+    flags: [ ]
+    custom-model-data: 0
+    lore:
+      - "&8The End Generator - Tier 2"
+      - "&7"
+      - "&7&oPlace down to activate the generator"
+  drops:
+    '0':
+      chance: 100
+      sell-value: 15000
+      commands: [ ]
+      item:
+        material: POPPED_CHORUS_FRUIT
+        display-name: "&5Popped Chorus Fruit &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - The End Tier 2"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$15000"
+
+endstone_generator:
+  display-name: "&f&lEnd Stone Generator"
+  world-type: THE_END
+  interval: 20
+  corrupted:
+    enabled: true
+    cost: 780
+    chance: 0.28
+  upgrade:
+    next-generator: purpur_generator
+    upgrade-cost: 85000000
+  item:
+    material: END_STONE
+    display-name: "&f&lEnd Stone Generator"
+    enchantments: [ ]
+    flags: [ ]
+    custom-model-data: 0
+    lore:
+      - "&8The End Generator - Tier 3"
+      - "&7"
+      - "&7&oPlace down to activate the generator"
+  drops:
+    '0':
+      chance: 100
+      sell-value: 20000
+      commands: [ ]
+      item:
+        material: END_STONE
+        display-name: "&fEnd Stone &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - The End Tier 3"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$20000"
+
+purpur_generator:
+  display-name: "&d&lPurpur Generator"
+  world-type: THE_END
+  interval: 20
+  corrupted:
+    enabled: true
+    cost: 940
+    chance: 0.27
+  upgrade:
+    next-generator: enderpearl_generator
+    upgrade-cost: 130000000
+  item:
+    material: PURPUR_BLOCK
+    display-name: "&d&lPurpur Generator"
+    enchantments: [ ]
+    flags: [ ]
+    custom-model-data: 0
+    lore:
+      - "&8The End Generator - Tier 4"
+      - "&7"
+      - "&7&oPlace down to activate the generator"
+  drops:
+    '0':
+      chance: 100
+      sell-value: 27000
+      commands: [ ]
+      item:
+        material: PURPUR_BLOCK
+        display-name: "&dPurpur Block &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - The End Tier 4"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$27000"
+
+enderpearl_generator:
+  display-name: "&2&lEnder Pearl Generator"
+  world-type: THE_END
+  interval: 20
+  corrupted:
+    enabled: true
+    cost: 1130
+    chance: 0.26
+  upgrade:
+    next-generator: endereye_generator
+    upgrade-cost: 200000000
+  item:
+    material: ENDER_PEARL
+    display-name: "&2&lEnder Pearl Generator"
+    enchantments: [ ]
+    flags: [ ]
+    custom-model-data: 0
+    lore:
+      - "&8The End Generator - Tier 5"
+      - "&7"
+      - "&7&oPlace down to activate the generator"
+  drops:
+    '0':
+      chance: 100
+      sell-value: 36000
+      commands: [ ]
+      item:
+        material: ENDER_PEARL
+        display-name: "&2Ender Pearl &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - The End Tier 5"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$36000"
+
+endereye_generator:
+  display-name: "&2&lEnder Eye Generator"
+  world-type: THE_END
+  interval: 20
+  corrupted:
+    enabled: true
+    cost: 1360
+    chance: 0.25
+  upgrade:
+    next-generator: shulkershell_generator
+    upgrade-cost: 300000000
+  item:
+    material: ENDER_EYE
+    display-name: "&2&lEnder Eye Generator"
+    enchantments: [ ]
+    flags: [ ]
+    custom-model-data: 0
+    lore:
+      - "&8The End Generator - Tier 6"
+      - "&7"
+      - "&7&oPlace down to activate the generator"
+  drops:
+    '0':
+      chance: 100
+      sell-value: 48000
+      commands: [ ]
+      item:
+        material: ENDER_EYE
+        display-name: "&2Eye of Ender &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - The End Tier 6"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$48000"
+
+shulkershell_generator:
+  display-name: "&5&lShulker Shell Generator"
+  world-type: THE_END
+  interval: 20
+  corrupted:
+    enabled: true
+    cost: 1630
+    chance: 0.23
+  upgrade:
+    next-generator: dragonbreath_generator
+    upgrade-cost: 450000000
+  item:
+    material: SHULKER_SHELL
+    display-name: "&5&lShulker Shell Generator"
+    enchantments: [ ]
+    flags: [ ]
+    custom-model-data: 0
+    lore:
+      - "&8The End Generator - Tier 7"
+      - "&7"
+      - "&7&oPlace down to activate the generator"
+  drops:
+    '0':
+      chance: 100
+      sell-value: 65000
+      commands: [ ]
+      item:
+        material: SHULKER_SHELL
+        display-name: "&5Shulker Shell &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - The End Tier 7"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$65000"
+
+dragonbreath_generator:
+  display-name: "&d&lDragon's Breath Generator"
+  world-type: THE_END
+  interval: 20
+  corrupted:
+    enabled: true
+    cost: 1960
+    chance: 0.21
+  upgrade:
+    next-generator: endcrystal_generator
+    upgrade-cost: 650000000
+  item:
+    material: DRAGON_BREATH
+    display-name: "&d&lDragon's Breath Generator"
+    enchantments: [ ]
+    flags: [ ]
+    custom-model-data: 0
+    lore:
+      - "&8The End Generator - Tier 8"
+      - "&7"
+      - "&7&oPlace down to activate the generator"
+  drops:
+    '0':
+      chance: 100
+      sell-value: 88000
+      commands: [ ]
+      item:
+        material: DRAGON_BREATH
+        display-name: "&dDragon's Breath &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - The End Tier 8"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$88000"
+
+endcrystal_generator:
+  display-name: "&f&lEnd Crystal Generator"
+  world-type: THE_END
+  interval: 20
+  corrupted:
+    enabled: true
+    cost: 2350
+    chance: 0.19
+  upgrade:
+    next-generator: dragonegg_generator
+    upgrade-cost: 900000000
+  item:
+    material: END_CRYSTAL
+    display-name: "&f&lEnd Crystal Generator"
+    enchantments: [ ]
+    flags: [ ]
+    custom-model-data: 0
+    lore:
+      - "&8The End Generator - Tier 9"
+      - "&7"
+      - "&7&oPlace down to activate the generator"
+  drops:
+    '0':
+      chance: 100
+      sell-value: 120000
+      commands: [ ]
+      item:
+        material: END_CRYSTAL
+        display-name: "&fEnd Crystal &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - The End Tier 9"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$120000"
+
+dragonegg_generator:
+  display-name: "&5&lDragon Egg Generator"
+  world-type: THE_END
+  interval: 20
+  corrupted:
+    enabled: true
+    cost: 3000
+    chance: 0.15
+  upgrade:
+    next-generator: null
+    upgrade-cost: 0
+  item:
+    material: DRAGON_EGG
+    display-name: "&5&lDragon Egg Generator"
+    enchantments: [ ]
+    flags: [ ]
+    custom-model-data: 0
+    lore:
+      - "&8The End Generator - Tier 10"
+      - "&7"
+      - "&7&oPlace down to activate the generator"
+  drops:
+    '0':
+      chance: 100
+      sell-value: 500000
+      commands: [ ]
+      item:
+        material: DRAGON_EGG
+        display-name: "&5Dragon Egg &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - The End Tier 10"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$500000"

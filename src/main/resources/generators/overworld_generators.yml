@@ -1,0 +1,377 @@
+# Overworld generator line (10 tiers) - place-able only in the Overworld.
+# Tier 10 (golden_apple_generator) needs 5x Shard Of Nether to upgrade into
+# the first Nether tier (netherwart_generator, see nether_generators.yml) -
+# since that generator can't be placed in the Overworld, upgrading it there
+# gives the item straight to the player's inventory instead of placing it.
+
+wheat_generator:
+  display-name: "&e&lWheat Generator"
+  world-type: OVERWORLD
+  interval: 20
+  corrupted:
+    enabled: true
+    cost: 12.5
+    chance: 0.25
+  upgrade:
+    next-generator: carrot_generator
+    upgrade-cost: 50
+  item:
+    material: WHEAT
+    display-name: "&e&lWheat Generator"
+    enchantments: [ ]
+    flags: [ ]
+    custom-model-data: 0
+    lore:
+      - "&8Overworld Generator - Tier 1"
+      - "&7"
+      - "&7&oPlace down to activate the generator"
+  drops:
+    '0':
+      chance: 100
+      sell-value: 8
+      commands: [ ]
+      item:
+        material: WHEAT
+        display-name: "&eWheat &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Overworld Tier 1"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$8"
+
+carrot_generator:
+  display-name: "&6&lCarrot Generator"
+  world-type: OVERWORLD
+  interval: 20
+  corrupted:
+    enabled: true
+    cost: 15
+    chance: 0.24
+  upgrade:
+    next-generator: potato_generator
+    upgrade-cost: 150
+  item:
+    material: CARROT
+    display-name: "&6&lCarrot Generator"
+    enchantments: [ ]
+    flags: [ ]
+    custom-model-data: 0
+    lore:
+      - "&8Overworld Generator - Tier 2"
+      - "&7"
+      - "&7&oPlace down to activate the generator"
+  drops:
+    '0':
+      chance: 100
+      sell-value: 12
+      commands: [ ]
+      item:
+        material: CARROT
+        display-name: "&6Carrot &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Overworld Tier 2"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$12"
+
+potato_generator:
+  display-name: "&f&lPotato Generator"
+  world-type: OVERWORLD
+  interval: 20
+  corrupted:
+    enabled: true
+    cost: 18
+    chance: 0.23
+  upgrade:
+    next-generator: sugarcane_generator
+    upgrade-cost: 400
+  item:
+    material: POTATO
+    display-name: "&f&lPotato Generator"
+    enchantments: [ ]
+    flags: [ ]
+    custom-model-data: 0
+    lore:
+      - "&8Overworld Generator - Tier 3"
+      - "&7"
+      - "&7&oPlace down to activate the generator"
+  drops:
+    '0':
+      chance: 100
+      sell-value: 18
+      commands: [ ]
+      item:
+        material: POTATO
+        display-name: "&fPotato &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Overworld Tier 3"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$18"
+
+sugarcane_generator:
+  display-name: "&a&lSugar Cane Generator"
+  world-type: OVERWORLD
+  interval: 20
+  corrupted:
+    enabled: true
+    cost: 22
+    chance: 0.22
+  upgrade:
+    next-generator: pumpkin_generator
+    upgrade-cost: 900
+  item:
+    material: SUGAR_CANE
+    display-name: "&a&lSugar Cane Generator"
+    enchantments: [ ]
+    flags: [ ]
+    custom-model-data: 0
+    lore:
+      - "&8Overworld Generator - Tier 4"
+      - "&7"
+      - "&7&oPlace down to activate the generator"
+  drops:
+    '0':
+      chance: 100
+      sell-value: 27
+      commands: [ ]
+      item:
+        material: SUGAR_CANE
+        display-name: "&aSugar Cane &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Overworld Tier 4"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$27"
+
+pumpkin_generator:
+  display-name: "&6&lPumpkin Generator"
+  world-type: OVERWORLD
+  interval: 20
+  corrupted:
+    enabled: true
+    cost: 27
+    chance: 0.21
+  upgrade:
+    next-generator: melon_generator
+    upgrade-cost: 2000
+  item:
+    material: PUMPKIN
+    display-name: "&6&lPumpkin Generator"
+    enchantments: [ ]
+    flags: [ ]
+    custom-model-data: 0
+    lore:
+      - "&8Overworld Generator - Tier 5"
+      - "&7"
+      - "&7&oPlace down to activate the generator"
+  drops:
+    '0':
+      chance: 100
+      sell-value: 40
+      commands: [ ]
+      item:
+        material: PUMPKIN
+        display-name: "&6Pumpkin &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Overworld Tier 5"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$40"
+
+melon_generator:
+  display-name: "&2&lMelon Generator"
+  world-type: OVERWORLD
+  interval: 20
+  corrupted:
+    enabled: true
+    cost: 33
+    chance: 0.2
+  upgrade:
+    next-generator: cactus_generator
+    upgrade-cost: 4500
+  item:
+    material: MELON
+    display-name: "&2&lMelon Generator"
+    enchantments: [ ]
+    flags: [ ]
+    custom-model-data: 0
+    lore:
+      - "&8Overworld Generator - Tier 6"
+      - "&7"
+      - "&7&oPlace down to activate the generator"
+  drops:
+    '0':
+      chance: 100
+      sell-value: 60
+      commands: [ ]
+      item:
+        material: MELON_SLICE
+        display-name: "&2Melon Slice &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Overworld Tier 6"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$60"
+
+cactus_generator:
+  display-name: "&2&lCactus Generator"
+  world-type: OVERWORLD
+  interval: 20
+  corrupted:
+    enabled: true
+    cost: 40
+    chance: 0.19
+  upgrade:
+    next-generator: bamboo_generator
+    upgrade-cost: 10000
+  item:
+    material: CACTUS
+    display-name: "&2&lCactus Generator"
+    enchantments: [ ]
+    flags: [ ]
+    custom-model-data: 0
+    lore:
+      - "&8Overworld Generator - Tier 7"
+      - "&7"
+      - "&7&oPlace down to activate the generator"
+  drops:
+    '0':
+      chance: 100
+      sell-value: 90
+      commands: [ ]
+      item:
+        material: CACTUS
+        display-name: "&2Cactus &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Overworld Tier 7"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$90"
+
+bamboo_generator:
+  display-name: "&a&lBamboo Generator"
+  world-type: OVERWORLD
+  interval: 20
+  corrupted:
+    enabled: true
+    cost: 48
+    chance: 0.18
+  upgrade:
+    next-generator: cocoa_generator
+    upgrade-cost: 22000
+  item:
+    material: BAMBOO
+    display-name: "&a&lBamboo Generator"
+    enchantments: [ ]
+    flags: [ ]
+    custom-model-data: 0
+    lore:
+      - "&8Overworld Generator - Tier 8"
+      - "&7"
+      - "&7&oPlace down to activate the generator"
+  drops:
+    '0':
+      chance: 100
+      sell-value: 135
+      commands: [ ]
+      item:
+        material: BAMBOO
+        display-name: "&aBamboo &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Overworld Tier 8"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$135"
+
+cocoa_generator:
+  display-name: "&6&lCocoa Bean Generator"
+  world-type: OVERWORLD
+  interval: 20
+  corrupted:
+    enabled: true
+    cost: 58
+    chance: 0.17
+  upgrade:
+    next-generator: golden_apple_generator
+    upgrade-cost: 48000
+  item:
+    material: COCOA_BEANS
+    display-name: "&6&lCocoa Bean Generator"
+    enchantments: [ ]
+    flags: [ ]
+    custom-model-data: 0
+    lore:
+      - "&8Overworld Generator - Tier 9"
+      - "&7"
+      - "&7&oPlace down to activate the generator"
+  drops:
+    '0':
+      chance: 100
+      sell-value: 200
+      commands: [ ]
+      item:
+        material: COCOA_BEANS
+        display-name: "&6Cocoa Beans &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Overworld Tier 9"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$200"
+
+golden_apple_generator:
+  display-name: "&e&lGolden Apple Generator"
+  world-type: OVERWORLD
+  interval: 20
+  corrupted:
+    enabled: true
+    cost: 70
+    chance: 0.15
+  upgrade:
+    next-generator: netherwart_generator
+    upgrade-cost: 100000
+    shard-cost:
+      nether: 5
+  item:
+    material: GOLDEN_APPLE
+    display-name: "&e&lGolden Apple Generator"
+    enchantments: [ ]
+    flags: [ ]
+    custom-model-data: 0
+    lore:
+      - "&8Overworld Generator - Tier 10"
+      - "&7"
+      - "&7&oPlace down to activate the generator"
+  drops:
+    '0':
+      chance: 100
+      sell-value: 300
+      commands: [ ]
+      item:
+        material: GOLDEN_APPLE
+        display-name: "&eGolden Apple &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Overworld Tier 10"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$300"

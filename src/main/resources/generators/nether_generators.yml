@@ -1,0 +1,396 @@
+# Nether generator line (10 tiers) - place-able only in the Nether.
+# EVERY upgrade within this line also costs Shard Of Nether (2-5x,
+# increasing per tier) on top of the money cost - not just the initial
+# crossover from the Overworld. Tier 10 (netherite_generator) needs 5x
+# Shard Of The End to upgrade into the first End tier (chorusfruit_generator,
+# see end_generators.yml).
+
+netherwart_generator:
+  display-name: "&4&lNether Wart Generator"
+  world-type: NETHER
+  interval: 20
+  corrupted:
+    enabled: true
+    cost: 85
+    chance: 0.28
+  upgrade:
+    next-generator: soulsand_generator
+    upgrade-cost: 150000
+    shard-cost:
+      nether: 2
+  item:
+    material: NETHER_WART
+    display-name: "&4&lNether Wart Generator"
+    enchantments: [ ]
+    flags: [ ]
+    custom-model-data: 0
+    lore:
+      - "&8Nether Generator - Tier 1"
+      - "&7"
+      - "&7&oPlace down to activate the generator"
+  drops:
+    '0':
+      chance: 100
+      sell-value: 450
+      commands: [ ]
+      item:
+        material: NETHER_WART
+        display-name: "&4Nether Wart &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Nether Tier 1"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$450"
+
+soulsand_generator:
+  display-name: "&8&lSoul Sand Generator"
+  world-type: NETHER
+  interval: 20
+  corrupted:
+    enabled: true
+    cost: 100
+    chance: 0.27
+  upgrade:
+    next-generator: glowstone_generator
+    upgrade-cost: 300000
+    shard-cost:
+      nether: 2
+  item:
+    material: SOUL_SAND
+    display-name: "&8&lSoul Sand Generator"
+    enchantments: [ ]
+    flags: [ ]
+    custom-model-data: 0
+    lore:
+      - "&8Nether Generator - Tier 2"
+      - "&7"
+      - "&7&oPlace down to activate the generator"
+  drops:
+    '0':
+      chance: 100
+      sell-value: 650
+      commands: [ ]
+      item:
+        material: SOUL_SAND
+        display-name: "&8Soul Sand &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Nether Tier 2"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$650"
+
+glowstone_generator:
+  display-name: "&e&lGlowstone Generator"
+  world-type: NETHER
+  interval: 20
+  corrupted:
+    enabled: true
+    cost: 120
+    chance: 0.26
+  upgrade:
+    next-generator: quartz_generator
+    upgrade-cost: 550000
+    shard-cost:
+      nether: 3
+  item:
+    material: GLOWSTONE
+    display-name: "&e&lGlowstone Generator"
+    enchantments: [ ]
+    flags: [ ]
+    custom-model-data: 0
+    lore:
+      - "&8Nether Generator - Tier 3"
+      - "&7"
+      - "&7&oPlace down to activate the generator"
+  drops:
+    '0':
+      chance: 100
+      sell-value: 900
+      commands: [ ]
+      item:
+        material: GLOWSTONE_DUST
+        display-name: "&eGlowstone Dust &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Nether Tier 3"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$900"
+
+quartz_generator:
+  display-name: "&f&lQuartz Generator"
+  world-type: NETHER
+  interval: 20
+  corrupted:
+    enabled: true
+    cost: 145
+    chance: 0.25
+  upgrade:
+    next-generator: magmacream_generator
+    upgrade-cost: 950000
+    shard-cost:
+      nether: 3
+  item:
+    material: NETHER_QUARTZ_ORE
+    display-name: "&f&lQuartz Generator"
+    enchantments: [ ]
+    flags: [ ]
+    custom-model-data: 0
+    lore:
+      - "&8Nether Generator - Tier 4"
+      - "&7"
+      - "&7&oPlace down to activate the generator"
+  drops:
+    '0':
+      chance: 100
+      sell-value: 1300
+      commands: [ ]
+      item:
+        material: QUARTZ
+        display-name: "&fQuartz &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Nether Tier 4"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$1300"
+
+magmacream_generator:
+  display-name: "&c&lMagma Cream Generator"
+  world-type: NETHER
+  interval: 20
+  corrupted:
+    enabled: true
+    cost: 175
+    chance: 0.24
+  upgrade:
+    next-generator: blazepowder_generator
+    upgrade-cost: 1600000
+    shard-cost:
+      nether: 3
+  item:
+    material: MAGMA_CREAM
+    display-name: "&c&lMagma Cream Generator"
+    enchantments: [ ]
+    flags: [ ]
+    custom-model-data: 0
+    lore:
+      - "&8Nether Generator - Tier 5"
+      - "&7"
+      - "&7&oPlace down to activate the generator"
+  drops:
+    '0':
+      chance: 100
+      sell-value: 1800
+      commands: [ ]
+      item:
+        material: MAGMA_CREAM
+        display-name: "&cMagma Cream &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Nether Tier 5"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$1800"
+
+blazepowder_generator:
+  display-name: "&e&lBlaze Powder Generator"
+  world-type: NETHER
+  interval: 20
+  corrupted:
+    enabled: true
+    cost: 210
+    chance: 0.23
+  upgrade:
+    next-generator: crimsonfungus_generator
+    upgrade-cost: 2700000
+    shard-cost:
+      nether: 4
+  item:
+    material: BLAZE_ROD
+    display-name: "&e&lBlaze Powder Generator"
+    enchantments: [ ]
+    flags: [ ]
+    custom-model-data: 0
+    lore:
+      - "&8Nether Generator - Tier 6"
+      - "&7"
+      - "&7&oPlace down to activate the generator"
+  drops:
+    '0':
+      chance: 100
+      sell-value: 2500
+      commands: [ ]
+      item:
+        material: BLAZE_POWDER
+        display-name: "&eBlaze Powder &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Nether Tier 6"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$2500"
+
+crimsonfungus_generator:
+  display-name: "&c&lCrimson Fungus Generator"
+  world-type: NETHER
+  interval: 20
+  corrupted:
+    enabled: true
+    cost: 255
+    chance: 0.22
+  upgrade:
+    next-generator: nethergold_generator
+    upgrade-cost: 4500000
+    shard-cost:
+      nether: 4
+  item:
+    material: CRIMSON_FUNGUS
+    display-name: "&c&lCrimson Fungus Generator"
+    enchantments: [ ]
+    flags: [ ]
+    custom-model-data: 0
+    lore:
+      - "&8Nether Generator - Tier 7"
+      - "&7"
+      - "&7&oPlace down to activate the generator"
+  drops:
+    '0':
+      chance: 100
+      sell-value: 3400
+      commands: [ ]
+      item:
+        material: CRIMSON_FUNGUS
+        display-name: "&cCrimson Fungus &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Nether Tier 7"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$3400"
+
+nethergold_generator:
+  display-name: "&6&lNether Gold Generator"
+  world-type: NETHER
+  interval: 20
+  corrupted:
+    enabled: true
+    cost: 305
+    chance: 0.21
+  upgrade:
+    next-generator: ancientdebris_generator
+    upgrade-cost: 7500000
+    shard-cost:
+      nether: 4
+  item:
+    material: NETHER_GOLD_ORE
+    display-name: "&6&lNether Gold Generator"
+    enchantments: [ ]
+    flags: [ ]
+    custom-model-data: 0
+    lore:
+      - "&8Nether Generator - Tier 8"
+      - "&7"
+      - "&7&oPlace down to activate the generator"
+  drops:
+    '0':
+      chance: 100
+      sell-value: 4600
+      commands: [ ]
+      item:
+        material: GOLD_NUGGET
+        display-name: "&6Gold Nugget &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Nether Tier 8"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$4600"
+
+ancientdebris_generator:
+  display-name: "&8&lAncient Debris Generator"
+  world-type: NETHER
+  interval: 20
+  corrupted:
+    enabled: true
+    cost: 370
+    chance: 0.2
+  upgrade:
+    next-generator: netherite_generator
+    upgrade-cost: 12500000
+    shard-cost:
+      nether: 5
+  item:
+    material: ANCIENT_DEBRIS
+    display-name: "&8&lAncient Debris Generator"
+    enchantments: [ ]
+    flags: [ ]
+    custom-model-data: 0
+    lore:
+      - "&8Nether Generator - Tier 9"
+      - "&7"
+      - "&7&oPlace down to activate the generator"
+  drops:
+    '0':
+      chance: 100
+      sell-value: 6200
+      commands: [ ]
+      item:
+        material: ANCIENT_DEBRIS
+        display-name: "&8Ancient Debris &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Nether Tier 9"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$6200"
+
+netherite_generator:
+  display-name: "&8&lNetherite Generator"
+  world-type: NETHER
+  interval: 20
+  corrupted:
+    enabled: true
+    cost: 450
+    chance: 0.18
+  upgrade:
+    next-generator: chorusfruit_generator
+    upgrade-cost: 20000000
+    shard-cost:
+      end: 5
+  item:
+    material: NETHERITE_SCRAP
+    display-name: "&8&lNetherite Generator"
+    enchantments: [ ]
+    flags: [ ]
+    custom-model-data: 0
+    lore:
+      - "&8Nether Generator - Tier 10"
+      - "&7"
+      - "&7&oPlace down to activate the generator"
+  drops:
+    '0':
+      chance: 100
+      sell-value: 8500
+      commands: [ ]
+      item:
+        material: NETHERITE_SCRAP
+        display-name: "&8Netherite Scrap &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Nether Tier 10"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$8500"
