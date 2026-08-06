@@ -26,6 +26,11 @@ out/
 *.tar.gz
 *.rar
 
+# ...except the system-scope dependency jars in libs/ (see pom.xml) - these
+# aren't resolvable from any Maven repository, so they need to be committed
+# for anyone else to be able to build this project at all.
+!/libs/*.jar
+
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
