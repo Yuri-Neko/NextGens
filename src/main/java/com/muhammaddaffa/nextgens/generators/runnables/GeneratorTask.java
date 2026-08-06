@@ -14,6 +14,7 @@ import com.muhammaddaffa.nextgens.generators.CorruptedHologram;
 import com.muhammaddaffa.nextgens.generators.Drop;
 import com.muhammaddaffa.nextgens.generators.Generator;
 import com.muhammaddaffa.nextgens.generators.managers.GeneratorManager;
+import com.muhammaddaffa.nextgens.hooks.armor.ArmorSpeedHook;
 import com.muhammaddaffa.nextgens.users.models.User;
 import com.muhammaddaffa.nextgens.users.UserManager;
 import com.muhammaddaffa.nextgens.utils.GensRunnable;
@@ -133,6 +134,17 @@ public class GeneratorTask extends GensRunnable {
             List<String> worldEnableGenerator = worldBoostSettings.getWhitelistGeneratorIds();
             if (worldDiscount > 0 && (worldEnableGenerator.isEmpty() || worldEnableGenerator.contains(generator.id()))) {
                 double discount = (generator.interval() * worldDiscount) / 100;
+                // deduct the interval
+                interval -= discount;
+            }
+            /**
+             * NextArmor SPEED set bonus (opsional, cuma berlaku kalau plugin NextArmor
+             * terpasang & owner generator ini sedang online memakai full-set SPEED yang
+             * lengkap & aktif) - lihat ArmorSpeedHook untuk detail.
+             */
+            double armorSpeedPercent = ArmorSpeedHook.getSpeedBonusPercent(active.getOwner());
+            if (armorSpeedPercent > 0) {
+                double discount = (generator.interval() * armorSpeedPercent) / 100;
                 // deduct the interval
                 interval -= discount;
             }
