@@ -1,0 +1,4 @@
+
+[+] Fix NextArmor SPEED-set bonus not being applied to actual generator drop interval (was only reflected in NextDroped's display, not the real timer)
+[+] Add generator speed bonus support from NextGensLevels' prestige rewards
+[+] Bundle FabledSkyBlock (3.5.0) and FancyHolograms (2.11.0) as local dependency jars so the project builds correctly for everyone
