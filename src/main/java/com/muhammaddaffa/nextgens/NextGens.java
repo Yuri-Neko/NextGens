@@ -73,6 +73,7 @@ public final class NextGens extends JavaPlugin {
     // NamespacedKey Section
     public static NamespacedKey generator_id;
     public static NamespacedKey drop_value;
+    public static NamespacedKey shard_type;
     public static NamespacedKey sellwand_global;
     public static NamespacedKey sellwand_multiplier;
     public static NamespacedKey sellwand_uses;
@@ -92,6 +93,7 @@ public final class NextGens extends JavaPlugin {
     private final RefundManager refundManager = new RefundManager(generatorManager);
     private final SellwandManager sellwandManager = new SellwandManager();
     private final AutosellManager autosellManager = new AutosellManager(userManager);
+    private final com.muhammaddaffa.nextgens.shards.ShardManager shardManager = new com.muhammaddaffa.nextgens.shards.ShardManager();
     private final SellMultiplierRegistry sellMultiplierRegistry = new SellMultiplierRegistry();
     private final HologramManager hologramManager = new HologramManager();
 
@@ -224,6 +226,7 @@ public final class NextGens extends JavaPlugin {
     private void keys() {
         generator_id = new NamespacedKey(this, "nextgens_generator_id");
         drop_value = new NamespacedKey(this, "nextgens_drop_value");
+        shard_type = new NamespacedKey(this, "nextgens_shard_type");
         sellwand_global = new NamespacedKey(this, "nextgens_sellwand_global");
         sellwand_multiplier = new NamespacedKey(this, "nextgens_sellwand_multiplier");
         sellwand_uses = new NamespacedKey(this, "nextgens_sellwand_uses");
@@ -423,6 +426,10 @@ public final class NextGens extends JavaPlugin {
 
     public GeneratorManager getGeneratorManager() {
         return generatorManager;
+    }
+
+    public com.muhammaddaffa.nextgens.shards.ShardManager getShardManager() {
+        return shardManager;
     }
 
     public RefundManager getRefundManager() {

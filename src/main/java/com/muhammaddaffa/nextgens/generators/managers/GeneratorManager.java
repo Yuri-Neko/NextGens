@@ -9,6 +9,7 @@ import com.muhammaddaffa.nextgens.database.DatabaseManager;
 import com.muhammaddaffa.nextgens.generators.ActiveGenerator;
 import com.muhammaddaffa.nextgens.generators.Drop;
 import com.muhammaddaffa.nextgens.generators.Generator;
+import com.muhammaddaffa.nextgens.generators.WorldType;
 import com.muhammaddaffa.nextgens.generators.runnables.GeneratorTask;
 import com.muhammaddaffa.nextgens.requirements.GensRequirement;
 import com.muhammaddaffa.nextgens.requirements.impl.PermissionRequirement;
@@ -387,6 +388,12 @@ public class GeneratorManager {
             Logger.info("Successfully created 'generators/elemental_generators.yml' file");
             NextGens.getInstance().saveResource("generators/orion_generators.yml", true);
             Logger.info("Successfully created 'generators/orion_generators.yml' file");
+            NextGens.getInstance().saveResource("generators/overworld_generators.yml", true);
+            Logger.info("Successfully created 'generators/overworld_generators.yml' file");
+            NextGens.getInstance().saveResource("generators/nether_generators.yml", true);
+            Logger.info("Successfully created 'generators/nether_generators.yml' file");
+            NextGens.getInstance().saveResource("generators/end_generators.yml", true);
+            Logger.info("Successfully created 'generators/end_generators.yml' file");
             // load back the generator
             this.loadGenerators();
         }
@@ -407,12 +414,15 @@ public class GeneratorManager {
     private void loadGenerators(String id, ConfigurationSection section) {
         // get all data
         String displayName = section.getString("display-name");
+        WorldType worldType = WorldType.parse(section.getString("world-type"));
         int interval = section.getInt("interval");
         boolean corrupted = section.getBoolean("corrupted.enabled");
         double fixCost = section.getDouble("corrupted.cost");
         double corruptChance = section.getDouble("corrupted.chance");
         String nextTier = section.getString("upgrade.next-generator");
         double upgradeCost = section.getDouble("upgrade.upgrade-cost");
+        int netherShardCost = section.getInt("upgrade.shard-cost.nether", 0);
+        int endShardCost = section.getInt("upgrade.shard-cost.end", 0);
         // online only options
         Boolean onlineOnly;
         if (section.get("online-only") == null) {
@@ -474,8 +484,8 @@ public class GeneratorManager {
         List<GensRequirement> placeRequirements = this.loadRequirement(section, "place-requirements");
         List<GensRequirement> upgradeRequirements = this.loadRequirement(section, "upgrade-requirements");
 
-        Generator generator = new Generator(id, displayName, interval, item, drops, nextTier, upgradeCost,
-                corrupted, fixCost, corruptChance, onlineOnly, placeRequirements, upgradeRequirements);
+        Generator generator = new Generator(id, displayName, worldType, interval, item, drops, nextTier, upgradeCost,
+                netherShardCost, endShardCost, corrupted, fixCost, corruptChance, onlineOnly, placeRequirements, upgradeRequirements);
 
         // call the custom event
         GeneratorLoadEvent loadEvent = new GeneratorLoadEvent(generator);

@@ -370,6 +370,30 @@ world-multipliers:
     whitelist-generator: # List of generator that's enabled on this world and this only affect speed-multiplier and drop-multiplier
       - example_generator
 
+# Appearance of the 2 cross-dimension upgrade shards (see "upgrade.shard-cost"
+# on a generator in generators.yml / generators/*.yml). Both are tagged
+# internally so a renamed/lookalike vanilla item never counts as the real
+# thing - material here is just the visual, not what's checked.
+shards:
+  shard-of-nether:
+    material: NETHER_STAR
+    display-name: "&d&lShard Of Nether"
+    lore:
+      - "&7A fragment of Nether energy."
+      - "&7Used to upgrade a maxed-out"
+      - "&7Overworld generator into"
+      - "&7its first Nether tier (and"
+      - "&7to keep upgrading within"
+      - "&7the Nether generator line)."
+  shard-of-the-end:
+    material: ECHO_SHARD
+    display-name: "&5&lShard Of The End"
+    lore:
+      - "&7A fragment of End energy."
+      - "&7Used to upgrade a maxed-out"
+      - "&7Nether generator into its"
+      - "&7first The End tier."
+
 messages:
   no-permission: '&6[NextGens] &cYou don''t have permission'
   reload: '&6[NextGens] &aYou have reloaded the configuration!'
@@ -392,6 +416,12 @@ messages:
   no-sell: '&6[NextGens] &cThere are no items to be sold!'
   no-permission-gen: '&6[NextGens] &cYou are not allowed to place this {gen}!'
   invalid-world: '&6[NextGens] &cYou are not allowed to place generator here!'
+  wrong-dimension: '&6[NextGens] &c{gen} can only be placed in the {dimension}!'
+  not-enough-shard: '&6[NextGens] &cYou need &e{required}x {shard} &cto upgrade this generator! &7(you have: {owned})'
+  generator-given-inventory: '&6[NextGens] &a{previous} &7-> &a{current} &7- can''t be placed in this dimension, so it was given to your inventory instead. Go place it in the {dimension}!'
+  invalid-shard-type: '&6[NextGens] &cInvalid shard type! Use &enether &cor &eend&c.'
+  give-shard: '&6[NextGens] &aYou gave &e{amount}x {shard} &ato &e{player}'
+  receive-shard: '&6[NextGens] &aYou received &e{amount}x {shard}&a!'
   gen-purchase: '&6[NextGens] &aYou have purchased {gen}'
   pickup-broken: '&6[NextGens] &cYou cannot pickup a broken generator!'
   global-repair: '&6[NextGens] &aYou have repaired all broken generators!'

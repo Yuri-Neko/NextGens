@@ -59,6 +59,11 @@ public record GeneratorPlaceListener(
             return;
         }
 
+        if (!generator.worldType().matches(block.getWorld())) {
+            notifyWrongDimension(player, event, generator);
+            return;
+        }
+
         if (isTooCloseToOtherGenerators(block, config)) {
             notifyTooClose(player, event);
             return;
@@ -113,6 +118,14 @@ public record GeneratorPlaceListener(
     private void notifyInvalidWorld(Player player, BlockPlaceEvent event) {
         event.setCancelled(true);
         NextGens.DEFAULT_CONFIG.sendMessage(player, "messages.invalid-world");
+        Utils.bassSound(player);
+    }
+
+    private void notifyWrongDimension(Player player, BlockPlaceEvent event, Generator generator) {
+        event.setCancelled(true);
+        NextGens.DEFAULT_CONFIG.sendMessage(player, "messages.wrong-dimension", new Placeholder()
+                .add("{gen}", generator.displayName())
+                .add("{dimension}", generator.worldType().name()));
         Utils.bassSound(player);
     }
 

@@ -10,6 +10,8 @@ import com.muhammaddaffa.nextgens.NextGens;
 import com.muhammaddaffa.nextgens.api.events.generators.GeneratorUpgradeEvent;
 import com.muhammaddaffa.nextgens.generators.ActiveGenerator;
 import com.muhammaddaffa.nextgens.generators.Generator;
+import com.muhammaddaffa.nextgens.shards.ShardManager;
+import com.muhammaddaffa.nextgens.shards.ShardType;
 import com.muhammaddaffa.nextgens.utils.Utils;
 import com.muhammaddaffa.nextgens.utils.VisualAction;
 import org.bukkit.Bukkit;
@@ -62,6 +64,16 @@ public class GeneratorUpdateHelper {
             Utils.bassSound(player);
             return false;
         }
+        // Shard cost check (cross-dimension upgrades, e.g. max Overworld -> first Nether tier)
+        ShardManager shardManager = NextGens.getInstance().getShardManager();
+        if (generator.netherShardCost() > 0
+                && !hasEnoughShard(player, shardManager, ShardType.NETHER, generator.netherShardCost())) {
+            return false;
+        }
+        if (generator.endShardCost() > 0
+                && !hasEnoughShard(player, shardManager, ShardType.END, generator.endShardCost())) {
+            return false;
+        }
         // call the custom events
         GeneratorUpgradeEvent upgradeEvent = new GeneratorUpgradeEvent(generator, player, nextGenerator);
         Bukkit.getPluginManager().callEvent(upgradeEvent);
@@ -70,15 +82,39 @@ public class GeneratorUpdateHelper {
         }
         // take the money from player
         VaultEconomy.withdraw(player, generator.cost());
-        // register the generator again
-        NextGens.getInstance().getGeneratorManager().registerGenerator(player, nextGenerator, block);
+        // take the shards from player, if any were required
+        if (generator.netherShardCost() > 0) {
+            shardManager.removeFromInventory(player.getInventory(), ShardType.NETHER, generator.netherShardCost());
+        }
+        if (generator.endShardCost() > 0) {
+            shardManager.removeFromInventory(player.getInventory(), ShardType.END, generator.endShardCost());
+        }
+        // If the next tier can't be placed in this world (e.g. upgrading a maxed-out
+        // Overworld generator into the first Nether-only tier), it can't just replace
+        // the block in place - remove the old generator and hand the new one's item
+        // to the player instead, same as if they'd broken it.
+        boolean crossDimension = !nextGenerator.worldType().matches(block.getWorld());
+        if (crossDimension) {
+            NextGens.getInstance().getGeneratorManager().unregisterGenerator(block);
+            NextGens.getInstance().getApi().giveGenerator(player, nextGenerator.id());
+        } else {
+            // register the generator again
+            NextGens.getInstance().getGeneratorManager().registerGenerator(player, nextGenerator, block);
+        }
         // visual actions
         FileConfiguration config = NextGens.DEFAULT_CONFIG.getConfig();
         if (!silent) {
-            VisualAction.send(player, config, "generator-upgrade-options", new Placeholder()
-                    .add("{previous}", generator.displayName())
-                    .add("{current}", nextGenerator.displayName())
-                    .add("{cost}", Common.digits(generator.cost())));
+            if (crossDimension) {
+                NextGens.DEFAULT_CONFIG.sendMessage(player, "messages.generator-given-inventory", new Placeholder()
+                        .add("{previous}", generator.displayName())
+                        .add("{current}", nextGenerator.displayName())
+                        .add("{dimension}", nextGenerator.worldType().name()));
+            } else {
+                VisualAction.send(player, config, "generator-upgrade-options", new Placeholder()
+                        .add("{previous}", generator.displayName())
+                        .add("{current}", nextGenerator.displayName())
+                        .add("{cost}", Common.digits(generator.cost())));
+            }
         }
         // play particle
         ExecutorManager.getProvider().async(() -> {
@@ -89,6 +125,19 @@ public class GeneratorUpdateHelper {
         // give cashback to the player
         Utils.performCashback(player, NextGens.getInstance().getUserManager(), generator.cost());
         return true;
+    }
+
+    private static boolean hasEnoughShard(Player player, ShardManager shardManager, ShardType type, int required) {
+        int owned = shardManager.countInInventory(player.getInventory(), type);
+        if (owned >= required) {
+            return true;
+        }
+        NextGens.DEFAULT_CONFIG.sendMessage(player, "messages.not-enough-shard", new Placeholder()
+                .add("{shard}", type.getDefaultName())
+                .add("{required}", required)
+                .add("{owned}", owned));
+        Utils.bassSound(player);
+        return false;
     }
 
 }

@@ -61,6 +61,7 @@ public class MainCommand extends RoutedCommand {
         ResetMaxCommand.handle(sub("resetmax"), userManager, generatorManager);
 
         GiveCommand.handle(sub("give"), generatorManager);
+        GiveShardCommand.handle(sub("giveshard"), NextGens.getInstance().getShardManager());
         RepairCommand.handle(sub("repair"), generatorManager);
         ReloadCommand.handle(sub("reload"), generatorManager, eventManager, worthManager);
         SellwandCommand.handle(sub("sellwand"), sellwandManager);
