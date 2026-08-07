@@ -15,6 +15,10 @@ ow_wheat_generator:
   upgrade:
     next-generator: ow_carrot_generator
     upgrade-cost: 50
+    require-level: 3
+    require-prestige: 1
+    shard-cost:
+      greenland: 1
   item:
     material: HAY_BLOCK
     display-name: "&e&lWheat Generator"
@@ -80,6 +84,10 @@ ow_carrot_generator:
   upgrade:
     next-generator: ow_potato_generator
     upgrade-cost: 150
+    require-level: 5
+    require-prestige: 1
+    shard-cost:
+      greenland: 1
   item:
     material: ORANGE_CONCRETE
     display-name: "&6&lCarrot Generator"
@@ -145,6 +153,10 @@ ow_potato_generator:
   upgrade:
     next-generator: ow_sugarcane_generator
     upgrade-cost: 400
+    require-level: 7
+    require-prestige: 1
+    shard-cost:
+      greenland: 2
   item:
     material: BROWN_CONCRETE
     display-name: "&f&lPotato Generator"
@@ -210,6 +222,10 @@ ow_sugarcane_generator:
   upgrade:
     next-generator: ow_pumpkin_generator
     upgrade-cost: 900
+    require-level: 9
+    require-prestige: 1
+    shard-cost:
+      greenland: 2
   item:
     material: LIME_CONCRETE
     display-name: "&a&lSugar Cane Generator"
@@ -275,6 +291,10 @@ ow_pumpkin_generator:
   upgrade:
     next-generator: ow_melon_generator
     upgrade-cost: 2000
+    require-level: 11
+    require-prestige: 1
+    shard-cost:
+      greenland: 3
   item:
     material: PUMPKIN
     display-name: "&6&lPumpkin Generator"
@@ -340,6 +360,10 @@ ow_melon_generator:
   upgrade:
     next-generator: ow_cactus_generator
     upgrade-cost: 4500
+    require-level: 13
+    require-prestige: 1
+    shard-cost:
+      greenland: 3
   item:
     material: MELON
     display-name: "&2&lMelon Generator"
@@ -405,6 +429,10 @@ ow_cactus_generator:
   upgrade:
     next-generator: ow_bamboo_generator
     upgrade-cost: 10000
+    require-level: 15
+    require-prestige: 1
+    shard-cost:
+      greenland: 4
   item:
     material: GREEN_CONCRETE
     display-name: "&2&lCactus Generator"
@@ -470,7 +498,10 @@ ow_bamboo_generator:
   upgrade:
     next-generator: ow_cocoa_generator
     upgrade-cost: 22000
-    require-level: 8
+    require-level: 17
+    require-prestige: 1
+    shard-cost:
+      greenland: 4
   item:
     material: BAMBOO_BLOCK
     display-name: "&a&lBamboo Generator"
@@ -536,9 +567,10 @@ ow_cocoa_generator:
   upgrade:
     next-generator: ow_golden_apple_generator
     upgrade-cost: 48000
+    require-level: 19
     require-prestige: 1
     shard-cost:
-      greenland: 3
+      greenland: 5
   item:
     material: BROWN_TERRACOTTA
     display-name: "&6&lCocoa Bean Generator"
