@@ -1,0 +1,7 @@
+
+[+] Fix generator materials that couldn't actually be placed (golden apple and 18 others - foods, crafting materials, or blocks restricted to specific surfaces) across all 30 example generators
+[+] Rewrite example generators' item lore to match the server's INFO-block convention (Purchasable Generator / Time / Generator Tier / Corruption Chance / Upgrade Cost / Reparation Cost / Possible Drops)
+[+] Add a Condensed drop (same material, 2x value, rarer) to every example generator
+[+] Add native per-drop "exp" field on generators.yml drops - NextGensLevels reads it directly, no per-generator config needed anymore
+[+] Empty out generators.yml (generators now live in generators/*.yml)
+[+] Fix release workflow (xmllint isn't available on GitHub-hosted runners) + add manual workflow_dispatch trigger
