@@ -175,6 +175,19 @@ public class GeneratorAPI {
         return null;
     }
 
+    /**
+     * @return the exp reward (see the "exp" field on a drop in generators.yml) baked into
+     * this item, if any - 0 if the item wasn't a generator drop, or that drop didn't have
+     * an exp reward configured. Multiplied by the stack's amount, same as {@link #getWorth}.
+     */
+    public double getExpReward(@Nullable ItemStack stack) {
+        if (stack == null || !stack.hasItemMeta()) return 0;
+        ItemMeta meta = stack.getItemMeta();
+        if (meta == null) return 0;
+        Double exp = meta.getPersistentDataContainer().get(NextGens.drop_exp, PersistentDataType.DOUBLE);
+        return exp == null ? 0 : exp * stack.getAmount();
+    }
+
     @Nullable
     public Double getWorth(@Nullable ItemStack stack) {
         if (stack == null) return null;

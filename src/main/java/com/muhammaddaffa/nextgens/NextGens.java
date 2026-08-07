@@ -73,6 +73,7 @@ public final class NextGens extends JavaPlugin {
     // NamespacedKey Section
     public static NamespacedKey generator_id;
     public static NamespacedKey drop_value;
+    public static NamespacedKey drop_exp;
     public static NamespacedKey shard_type;
     public static NamespacedKey sellwand_global;
     public static NamespacedKey sellwand_multiplier;
@@ -226,6 +227,7 @@ public final class NextGens extends JavaPlugin {
     private void keys() {
         generator_id = new NamespacedKey(this, "nextgens_generator_id");
         drop_value = new NamespacedKey(this, "nextgens_drop_value");
+        drop_exp = new NamespacedKey(this, "nextgens_drop_exp");
         shard_type = new NamespacedKey(this, "nextgens_shard_type");
         sellwand_global = new NamespacedKey(this, "nextgens_sellwand_global");
         sellwand_multiplier = new NamespacedKey(this, "nextgens_sellwand_multiplier");

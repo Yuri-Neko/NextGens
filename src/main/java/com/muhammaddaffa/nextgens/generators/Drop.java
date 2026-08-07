@@ -24,12 +24,16 @@ public record Drop(
         double chance,
         @Nullable ItemStack item,
         @Nullable Double dropValue,
+        double expReward,
         List<String> commands
 ) {
 
     public static Drop fromConfig(String id, String key, ConfigurationSection section) {
         double chance = section.getDouble("chance");
         Double sellValue = section.get("sell-value") == null ? null : section.getDouble("sell-value");
+        // EXP granted (to NextGensLevels, if installed - it's a hard dependency of NextGens)
+        // to the generator's owner every time THIS specific drop is chosen. 0 = no exp.
+        double expReward = section.getDouble("exp", 0);
 
         ItemStack stack = null;
         if (section.isConfigurationSection("item")) {
@@ -54,7 +58,7 @@ public record Drop(
         }
 
         List<String> commands = section.getStringList("commands");
-        return new Drop(id + "_" + key, chance, stack, sellValue, commands);
+        return new Drop(id + "_" + key, chance, stack, sellValue, expReward, commands);
     }
 
     public boolean shouldUse() {
@@ -67,6 +71,10 @@ public record Drop(
         // add the drop value
         if (this.dropValue() != null) {
             builder.pdc(NextGens.drop_value, this.dropValue());
+        }
+        // add the exp reward, so it's readable straight off the item (not just the event)
+        if (this.expReward() > 0) {
+            builder.pdc(NextGens.drop_exp, this.expReward());
         }
         return builder.build();
     }

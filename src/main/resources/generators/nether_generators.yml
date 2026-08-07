@@ -43,6 +43,7 @@ nt_netherwart_generator:
     '0':
       chance: 85
       sell-value: 450
+      exp: 3.32
       commands: [ ]
       item:
         material: NETHER_WART
@@ -57,6 +58,7 @@ nt_netherwart_generator:
     '1':
       chance: 15
       sell-value: 900
+      exp: 6.64
       commands: [ ]
       item:
         material: NETHER_WART
@@ -108,6 +110,7 @@ nt_soulsand_generator:
     '0':
       chance: 85
       sell-value: 650
+      exp: 3.59
       commands: [ ]
       item:
         material: SOUL_SAND
@@ -122,6 +125,7 @@ nt_soulsand_generator:
     '1':
       chance: 15
       sell-value: 1300
+      exp: 7.18
       commands: [ ]
       item:
         material: SOUL_SAND
@@ -173,6 +177,7 @@ nt_glowstone_generator:
     '0':
       chance: 85
       sell-value: 900
+      exp: 3.89
       commands: [ ]
       item:
         material: GLOWSTONE_DUST
@@ -187,6 +192,7 @@ nt_glowstone_generator:
     '1':
       chance: 15
       sell-value: 1800
+      exp: 7.78
       commands: [ ]
       item:
         material: GLOWSTONE_DUST
@@ -238,6 +244,7 @@ nt_quartz_generator:
     '0':
       chance: 85
       sell-value: 1300
+      exp: 4.21
       commands: [ ]
       item:
         material: QUARTZ
@@ -252,6 +259,7 @@ nt_quartz_generator:
     '1':
       chance: 15
       sell-value: 2600
+      exp: 8.42
       commands: [ ]
       item:
         material: QUARTZ
@@ -303,6 +311,7 @@ nt_magmacream_generator:
     '0':
       chance: 85
       sell-value: 1800
+      exp: 4.56
       commands: [ ]
       item:
         material: MAGMA_CREAM
@@ -317,6 +326,7 @@ nt_magmacream_generator:
     '1':
       chance: 15
       sell-value: 3600
+      exp: 9.12
       commands: [ ]
       item:
         material: MAGMA_CREAM
@@ -368,6 +378,7 @@ nt_blazepowder_generator:
     '0':
       chance: 85
       sell-value: 2500
+      exp: 4.94
       commands: [ ]
       item:
         material: BLAZE_POWDER
@@ -382,6 +393,7 @@ nt_blazepowder_generator:
     '1':
       chance: 15
       sell-value: 5000
+      exp: 9.88
       commands: [ ]
       item:
         material: BLAZE_POWDER
@@ -433,6 +445,7 @@ nt_crimsonfungus_generator:
     '0':
       chance: 85
       sell-value: 3400
+      exp: 5.34
       commands: [ ]
       item:
         material: CRIMSON_FUNGUS
@@ -447,6 +460,7 @@ nt_crimsonfungus_generator:
     '1':
       chance: 15
       sell-value: 6800
+      exp: 10.68
       commands: [ ]
       item:
         material: CRIMSON_FUNGUS
@@ -498,6 +512,7 @@ nt_nethergold_generator:
     '0':
       chance: 85
       sell-value: 4600
+      exp: 5.78
       commands: [ ]
       item:
         material: GOLD_NUGGET
@@ -512,6 +527,7 @@ nt_nethergold_generator:
     '1':
       chance: 15
       sell-value: 9200
+      exp: 11.56
       commands: [ ]
       item:
         material: GOLD_NUGGET
@@ -563,6 +579,7 @@ nt_ancientdebris_generator:
     '0':
       chance: 85
       sell-value: 6200
+      exp: 6.26
       commands: [ ]
       item:
         material: ANCIENT_DEBRIS
@@ -577,6 +594,7 @@ nt_ancientdebris_generator:
     '1':
       chance: 15
       sell-value: 12400
+      exp: 12.52
       commands: [ ]
       item:
         material: ANCIENT_DEBRIS
@@ -628,6 +646,7 @@ nt_netherite_generator:
     '0':
       chance: 85
       sell-value: 8500
+      exp: 6.78
       commands: [ ]
       item:
         material: NETHERITE_SCRAP
@@ -642,6 +661,7 @@ nt_netherite_generator:
     '1':
       chance: 15
       sell-value: 17000
+      exp: 13.56
       commands: [ ]
       item:
         material: NETHERITE_SCRAP

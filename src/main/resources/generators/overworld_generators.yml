@@ -40,6 +40,7 @@ ow_wheat_generator:
     '0':
       chance: 85
       sell-value: 8
+      exp: 1.5
       commands: [ ]
       item:
         material: WHEAT
@@ -54,6 +55,7 @@ ow_wheat_generator:
     '1':
       chance: 15
       sell-value: 16
+      exp: 3.0
       commands: [ ]
       item:
         material: WHEAT
@@ -103,6 +105,7 @@ ow_carrot_generator:
     '0':
       chance: 85
       sell-value: 12
+      exp: 1.62
       commands: [ ]
       item:
         material: CARROT
@@ -117,6 +120,7 @@ ow_carrot_generator:
     '1':
       chance: 15
       sell-value: 24
+      exp: 3.24
       commands: [ ]
       item:
         material: CARROT
@@ -166,6 +170,7 @@ ow_potato_generator:
     '0':
       chance: 85
       sell-value: 18
+      exp: 1.76
       commands: [ ]
       item:
         material: POTATO
@@ -180,6 +185,7 @@ ow_potato_generator:
     '1':
       chance: 15
       sell-value: 36
+      exp: 3.52
       commands: [ ]
       item:
         material: POTATO
@@ -229,6 +235,7 @@ ow_sugarcane_generator:
     '0':
       chance: 85
       sell-value: 27
+      exp: 1.9
       commands: [ ]
       item:
         material: SUGAR_CANE
@@ -243,6 +250,7 @@ ow_sugarcane_generator:
     '1':
       chance: 15
       sell-value: 54
+      exp: 3.8
       commands: [ ]
       item:
         material: SUGAR_CANE
@@ -292,6 +300,7 @@ ow_pumpkin_generator:
     '0':
       chance: 85
       sell-value: 40
+      exp: 2.06
       commands: [ ]
       item:
         material: PUMPKIN
@@ -306,6 +315,7 @@ ow_pumpkin_generator:
     '1':
       chance: 15
       sell-value: 80
+      exp: 4.12
       commands: [ ]
       item:
         material: PUMPKIN
@@ -355,6 +365,7 @@ ow_melon_generator:
     '0':
       chance: 85
       sell-value: 60
+      exp: 2.23
       commands: [ ]
       item:
         material: MELON_SLICE
@@ -369,6 +380,7 @@ ow_melon_generator:
     '1':
       chance: 15
       sell-value: 120
+      exp: 4.46
       commands: [ ]
       item:
         material: MELON_SLICE
@@ -418,6 +430,7 @@ ow_cactus_generator:
     '0':
       chance: 85
       sell-value: 90
+      exp: 2.42
       commands: [ ]
       item:
         material: CACTUS
@@ -432,6 +445,7 @@ ow_cactus_generator:
     '1':
       chance: 15
       sell-value: 180
+      exp: 4.84
       commands: [ ]
       item:
         material: CACTUS
@@ -482,6 +496,7 @@ ow_bamboo_generator:
     '0':
       chance: 85
       sell-value: 135
+      exp: 2.61
       commands: [ ]
       item:
         material: BAMBOO
@@ -496,6 +511,7 @@ ow_bamboo_generator:
     '1':
       chance: 15
       sell-value: 270
+      exp: 5.22
       commands: [ ]
       item:
         material: BAMBOO
@@ -548,6 +564,7 @@ ow_cocoa_generator:
     '0':
       chance: 85
       sell-value: 200
+      exp: 2.83
       commands: [ ]
       item:
         material: COCOA_BEANS
@@ -562,6 +579,7 @@ ow_cocoa_generator:
     '1':
       chance: 15
       sell-value: 400
+      exp: 5.66
       commands: [ ]
       item:
         material: COCOA_BEANS
@@ -613,6 +631,7 @@ ow_golden_apple_generator:
     '0':
       chance: 85
       sell-value: 300
+      exp: 3.07
       commands: [ ]
       item:
         material: GOLDEN_APPLE
@@ -627,6 +646,7 @@ ow_golden_apple_generator:
     '1':
       chance: 15
       sell-value: 600
+      exp: 6.14
       commands: [ ]
       item:
         material: GOLDEN_APPLE

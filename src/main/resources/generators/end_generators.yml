@@ -38,6 +38,7 @@ end_chorusfruit_generator:
     '0':
       chance: 85
       sell-value: 11000
+      exp: 7.34
       commands: [ ]
       item:
         material: CHORUS_FRUIT
@@ -52,6 +53,7 @@ end_chorusfruit_generator:
     '1':
       chance: 15
       sell-value: 22000
+      exp: 14.68
       commands: [ ]
       item:
         material: CHORUS_FRUIT
@@ -101,6 +103,7 @@ end_poppedchorus_generator:
     '0':
       chance: 85
       sell-value: 15000
+      exp: 7.95
       commands: [ ]
       item:
         material: POPPED_CHORUS_FRUIT
@@ -115,6 +118,7 @@ end_poppedchorus_generator:
     '1':
       chance: 15
       sell-value: 30000
+      exp: 15.9
       commands: [ ]
       item:
         material: POPPED_CHORUS_FRUIT
@@ -164,6 +168,7 @@ end_endstone_generator:
     '0':
       chance: 85
       sell-value: 20000
+      exp: 8.6
       commands: [ ]
       item:
         material: END_STONE
@@ -178,6 +183,7 @@ end_endstone_generator:
     '1':
       chance: 15
       sell-value: 40000
+      exp: 17.2
       commands: [ ]
       item:
         material: END_STONE
@@ -227,6 +233,7 @@ end_purpur_generator:
     '0':
       chance: 85
       sell-value: 27000
+      exp: 9.32
       commands: [ ]
       item:
         material: PURPUR_BLOCK
@@ -241,6 +248,7 @@ end_purpur_generator:
     '1':
       chance: 15
       sell-value: 54000
+      exp: 18.64
       commands: [ ]
       item:
         material: PURPUR_BLOCK
@@ -290,6 +298,7 @@ end_enderpearl_generator:
     '0':
       chance: 85
       sell-value: 36000
+      exp: 10.09
       commands: [ ]
       item:
         material: ENDER_PEARL
@@ -304,6 +313,7 @@ end_enderpearl_generator:
     '1':
       chance: 15
       sell-value: 72000
+      exp: 20.18
       commands: [ ]
       item:
         material: ENDER_PEARL
@@ -353,6 +363,7 @@ end_endereye_generator:
     '0':
       chance: 85
       sell-value: 48000
+      exp: 10.92
       commands: [ ]
       item:
         material: ENDER_EYE
@@ -367,6 +378,7 @@ end_endereye_generator:
     '1':
       chance: 15
       sell-value: 96000
+      exp: 21.84
       commands: [ ]
       item:
         material: ENDER_EYE
@@ -416,6 +428,7 @@ end_shulkershell_generator:
     '0':
       chance: 85
       sell-value: 65000
+      exp: 11.82
       commands: [ ]
       item:
         material: SHULKER_SHELL
@@ -430,6 +443,7 @@ end_shulkershell_generator:
     '1':
       chance: 15
       sell-value: 130000
+      exp: 23.64
       commands: [ ]
       item:
         material: SHULKER_SHELL
@@ -479,6 +493,7 @@ end_dragonbreath_generator:
     '0':
       chance: 85
       sell-value: 88000
+      exp: 12.8
       commands: [ ]
       item:
         material: DRAGON_BREATH
@@ -493,6 +508,7 @@ end_dragonbreath_generator:
     '1':
       chance: 15
       sell-value: 176000
+      exp: 25.6
       commands: [ ]
       item:
         material: DRAGON_BREATH
@@ -542,6 +558,7 @@ end_endcrystal_generator:
     '0':
       chance: 85
       sell-value: 120000
+      exp: 13.86
       commands: [ ]
       item:
         material: END_CRYSTAL
@@ -556,6 +573,7 @@ end_endcrystal_generator:
     '1':
       chance: 15
       sell-value: 240000
+      exp: 27.72
       commands: [ ]
       item:
         material: END_CRYSTAL
@@ -605,6 +623,7 @@ end_dragonegg_generator:
     '0':
       chance: 85
       sell-value: 500000
+      exp: 15.0
       commands: [ ]
       item:
         material: DRAGON_EGG
@@ -619,6 +638,7 @@ end_dragonegg_generator:
     '1':
       chance: 15
       sell-value: 1000000
+      exp: 30.0
       commands: [ ]
       item:
         material: DRAGON_EGG
