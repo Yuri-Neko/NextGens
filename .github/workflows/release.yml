@@ -11,6 +11,7 @@ on:
     branches: [ master ]
     paths:
       - 'pom.xml'
+  workflow_dispatch: { }
 
 permissions:
   contents: write
@@ -39,18 +40,18 @@ jobs:
           fi
 
       - name: Set up JDK 21
-        if: steps.check.outputs.changed == 'true'
+        if: steps.check.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '21'
 
       - name: Build with Maven
-        if: steps.check.outputs.changed == 'true'
+        if: steps.check.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
         run: mvn -B -DskipTests clean package
 
       - name: Locate built jar
-        if: steps.check.outputs.changed == 'true'
+        if: steps.check.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
         id: jar
         run: |
           JAR_PATH=$(find target -maxdepth 1 -name '*.jar' ! -name 'original-*.jar' ! -name '*-sources.jar' ! -name '*-javadoc.jar' | head -n1)
@@ -58,7 +59,7 @@ jobs:
           echo "path=$JAR_PATH" >> "$GITHUB_OUTPUT"
 
       - name: Create GitHub Release
-        if: steps.check.outputs.changed == 'true'
+        if: steps.check.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v${{ steps.check.outputs.version }}
