@@ -27,9 +27,9 @@ jobs:
       - name: Check if project version changed
         id: check
         run: |
-          CURRENT=$(xmllint --xpath "string(/*[local-name()='project']/*[local-name()='version'])" pom.xml)
-          git show HEAD~1:pom.xml > /tmp/previous_pom.xml 2>/dev/null || echo "<project/>" > /tmp/previous_pom.xml
-          PREVIOUS=$(xmllint --xpath "string(/*[local-name()='project']/*[local-name()='version'])" /tmp/previous_pom.xml 2>/dev/null || echo "")
+          CURRENT=$(sed -n 's/.*<version>\(.*\)<\/version>.*/\1/p' pom.xml | head -1)
+          git show HEAD~1:pom.xml > /tmp/previous_pom.xml 2>/dev/null || true
+          PREVIOUS=$(sed -n 's/.*<version>\(.*\)<\/version>.*/\1/p' /tmp/previous_pom.xml 2>/dev/null | head -1)
           echo "Current version: $CURRENT / Previous version: $PREVIOUS"
           echo "version=$CURRENT" >> "$GITHUB_OUTPUT"
           if [ "$CURRENT" != "$PREVIOUS" ] && [ -n "$CURRENT" ]; then
