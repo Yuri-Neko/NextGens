@@ -203,6 +203,12 @@ public class GeneratorTask extends GensRunnable {
             } else {
                 dropAmount = 1;
             }
+            // Floor: no matter how much world/event/armor/prestige speed discounts stack
+            // together, the interval can never go below this (config: settings.minimum-
+            // generator-interval, seconds - default 5.0). Without this, aggressively
+            // combined discounts could add up past 100% and make generators drop almost
+            // every tick.
+            interval = Math.max(interval, Settings.MINIMUM_GENERATOR_INTERVAL);
             // add timer
             active.addTimer(0.25);
             //Logger.info("Generator " + generator.id() + " timer: " + active.getTimer() + " / " + interval);

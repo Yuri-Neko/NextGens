@@ -30,7 +30,7 @@ public class Settings {
     public static List<Integer> CORRUPT_GUI_DISPLAY_SLOTS;
 
     // Double
-    public static double CORRUPTION_HOLOGRAM_HEIGHT, FANCY_HOLOGRAM_SCALE;
+    public static double CORRUPTION_HOLOGRAM_HEIGHT, FANCY_HOLOGRAM_SCALE, MINIMUM_GENERATOR_INTERVAL;
 
     // Config Message
     public static ConfigMessage CORRUPTION_BROADCAST, CORRUPTION_NOTIFY_MESSAGE;
@@ -87,6 +87,8 @@ public class Settings {
 
         // Double
         CORRUPTION_HOLOGRAM_HEIGHT = config.getDouble("corruption.hologram.height");
+        MINIMUM_GENERATOR_INTERVAL = config.contains("settings.minimum-generator-interval")
+                ? config.getDouble("settings.minimum-generator-interval") : 5.0;
         FANCY_HOLOGRAM_SCALE = config.getDouble("holograms.fancyholograms.scale");
 
         // Config Message

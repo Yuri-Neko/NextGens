@@ -1,0 +1,2 @@
+
+[+] Add settings.minimum-generator-interval (default: 5.0 seconds) - a configurable floor so stacked speed discounts (world boost + event + NextArmor + NextGensLevels prestige) can never combine past 100% and make generators drop almost every tick
