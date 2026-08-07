@@ -1,0 +1,2 @@
+
+[+] Add 7 ready-to-use "type: CUSTOM" example events to events.yml (no_tax_day, tax_discount_weekend, tax_holiday_high, broken_gens_1_5x, broken_gens_2x, exp_sell_2x, chaos_event) - matches NextEventExtended's own documented examples exactly, so installing both together works immediately with no extra setup

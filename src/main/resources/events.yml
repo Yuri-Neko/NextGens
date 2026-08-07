@@ -366,3 +366,197 @@ events:
       # Blacklisted generator that will not affected by this event
       blacklisted_generators:
         - disabled_generator_id
+
+    # =====================================================
+    # The 7 events below are "type: CUSTOM" - NextGens itself does nothing
+    # special with them (no built-in sell/speed/upgrade/drop effect), they
+    # just exist as a normal timed/random event. NextEventExtended (an addon
+    # plugin) is what gives them an actual effect, by matching their ID here
+    # to the SAME ID under "custom-events" in NextEventExtended's own
+    # config.yml. These 7 match NextEventExtended's own documented examples
+    # exactly - install it and they work immediately, no extra setup needed.
+    # =====================================================
+    no_tax_day:
+      type: CUSTOM
+      display-name: '&a&lNo Tax Day'
+      duration: 1800
+      chance: 50
+      only-by-command: false
+      start-message:
+        - '&7'
+        - '  &a&lEvent Started'
+        - '&7'
+        - '  &aType: &f{name}'
+        - '  &aDuration: &f{duration}'
+        - '&7'
+        - '  &7All generator sell tax is now &a0% &7(( /sell ))'
+        - '&7'
+      end-message:
+        - '&7'
+        - '  &c&lEvent Ended'
+        - '&7'
+        - '  &aType: &f{name}'
+        - '  &aNext Event In: &f{next_duration}'
+        - '&7'
+        - '  &7Sell tax is back to normal.'
+        - '&7'
+      blacklisted_generators:
+        - disabled_generator_id
+    tax_discount_weekend:
+      type: CUSTOM
+      display-name: '&2&l50% Tax Discount'
+      duration: 1800
+      chance: 50
+      only-by-command: false
+      start-message:
+        - '&7'
+        - '  &2&lEvent Started'
+        - '&7'
+        - '  &2Type: &f{name}'
+        - '  &2Duration: &f{duration}'
+        - '&7'
+        - '  &7Generator sell tax is now &a50% &7lower than usual'
+        - '&7'
+      end-message:
+        - '&7'
+        - '  &c&lEvent Ended'
+        - '&7'
+        - '  &2Type: &f{name}'
+        - '  &2Next Event In: &f{next_duration}'
+        - '&7'
+        - '  &7Sell tax is back to normal.'
+        - '&7'
+      blacklisted_generators:
+        - disabled_generator_id
+    tax_holiday_high:
+      type: CUSTOM
+      display-name: '&4&lTax Holiday (High)'
+      duration: 900
+      chance: 25
+      only-by-command: true
+      start-message:
+        - '&7'
+        - '  &4&lEvent Started'
+        - '&7'
+        - '  &4Type: &f{name}'
+        - '  &4Duration: &f{duration}'
+        - '&7'
+        - '  &7Generator sell tax is now a flat &c20%'
+        - '&7'
+      end-message:
+        - '&7'
+        - '  &c&lEvent Ended'
+        - '&7'
+        - '  &4Type: &f{name}'
+        - '  &4Next Event In: &f{next_duration}'
+        - '&7'
+        - '  &7Sell tax is back to normal.'
+        - '&7'
+      blacklisted_generators:
+        - disabled_generator_id
+    broken_gens_1_5x:
+      type: CUSTOM
+      display-name: '&6&lBroken Gens 1.5x'
+      duration: 900
+      chance: 25
+      only-by-command: true
+      start-message:
+        - '&7'
+        - '  &6&lEvent Started'
+        - '&7'
+        - '  &6Type: &f{name}'
+        - '  &6Duration: &f{duration}'
+        - '&7'
+        - '  &7Generators are &c1.5x &7more likely to break!'
+        - '&7'
+      end-message:
+        - '&7'
+        - '  &c&lEvent Ended'
+        - '&7'
+        - '  &6Type: &f{name}'
+        - '  &6Next Event In: &f{next_duration}'
+        - '&7'
+        - '  &7Generator break chance is back to normal.'
+        - '&7'
+      blacklisted_generators:
+        - disabled_generator_id
+    broken_gens_2x:
+      type: CUSTOM
+      display-name: '&4&lBroken Gens 2x'
+      duration: 600
+      chance: 15
+      only-by-command: true
+      start-message:
+        - '&7'
+        - '  &4&lEvent Started'
+        - '&7'
+        - '  &4Type: &f{name}'
+        - '  &4Duration: &f{duration}'
+        - '&7'
+        - '  &7Generators are &c2x &7more likely to break!'
+        - '&7'
+      end-message:
+        - '&7'
+        - '  &c&lEvent Ended'
+        - '&7'
+        - '  &4Type: &f{name}'
+        - '  &4Next Event In: &f{next_duration}'
+        - '&7'
+        - '  &7Generator break chance is back to normal.'
+        - '&7'
+      blacklisted_generators:
+        - disabled_generator_id
+    exp_sell_2x:
+      type: CUSTOM
+      display-name: '&d&lEXP Boost!'
+      duration: 1800
+      chance: 50
+      only-by-command: false
+      start-message:
+        - '&7'
+        - '  &d&lEvent Started'
+        - '&7'
+        - '  &dType: &f{name}'
+        - '  &dDuration: &f{duration}'
+        - '&7'
+        - '  &7NextGensLevels EXP from selling generator'
+        - '  &7drops is now &d2x &7higher!'
+        - '&7'
+      end-message:
+        - '&7'
+        - '  &c&lEvent Ended'
+        - '&7'
+        - '  &dType: &f{name}'
+        - '  &dNext Event In: &f{next_duration}'
+        - '&7'
+        - '  &7EXP gain is back to normal.'
+        - '&7'
+      blacklisted_generators:
+        - disabled_generator_id
+    chaos_event:
+      type: CUSTOM
+      display-name: '&5&k|&r &5&lCHAOS EVENT &r&5&k|'
+      duration: 600
+      chance: 10
+      only-by-command: true
+      start-message:
+        - '&7'
+        - '  &5&lEvent Started'
+        - '&7'
+        - '  &5Type: &f{name}'
+        - '  &5Duration: &f{duration}'
+        - '&7'
+        - '  &7Tax &c1.5x&7, broken gens chance &c2x&7,'
+        - '  &7and EXP gain &d2x &7- all at once!'
+        - '&7'
+      end-message:
+        - '&7'
+        - '  &c&lEvent Ended'
+        - '&7'
+        - '  &5Type: &f{name}'
+        - '  &5Next Event In: &f{next_duration}'
+        - '&7'
+        - '  &7Everything is back to normal.'
+        - '&7'
+      blacklisted_generators:
+        - disabled_generator_id
