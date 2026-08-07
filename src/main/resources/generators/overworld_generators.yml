@@ -16,17 +16,25 @@ ow_wheat_generator:
     next-generator: ow_carrot_generator
     upgrade-cost: 50
   item:
-    material: WHEAT
+    material: HAY_BLOCK
     display-name: "&e&lWheat Generator"
     enchantments: [ ]
     flags: [ ]
     custom-model-data: 0
     lore:
-      - "&8Overworld Generator - Tier 1"
+      - "&8Purchasable Generator"
       - "&7"
-      - "&7Possible Drops:"
+      - "&e&lINFO"
+      - "&8Time: &f20 seconds"
+      - "&8Generator Tier: &f1"
+      - "&8Corruption Chance: &f0.25%"
+      - "&a&lUpgrade Cost: &a&n$50"
+      - "&c&lReparation Cost: &c&n$12.5"
+      - "&7"
+      - "&e&lPossible Drops"
       - "&7&eWheat &8(value: &a$8&8)"
       - "&7&eCondensed Wheat &8(value: &a$16&8)"
+      - "&7"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
@@ -71,17 +79,25 @@ ow_carrot_generator:
     next-generator: ow_potato_generator
     upgrade-cost: 150
   item:
-    material: CARROT
+    material: ORANGE_CONCRETE
     display-name: "&6&lCarrot Generator"
     enchantments: [ ]
     flags: [ ]
     custom-model-data: 0
     lore:
-      - "&8Overworld Generator - Tier 2"
+      - "&8Purchasable Generator"
       - "&7"
-      - "&7Possible Drops:"
+      - "&6&lINFO"
+      - "&8Time: &f20 seconds"
+      - "&8Generator Tier: &f2"
+      - "&8Corruption Chance: &f0.24%"
+      - "&a&lUpgrade Cost: &a&n$150"
+      - "&c&lReparation Cost: &c&n$15"
+      - "&7"
+      - "&6&lPossible Drops"
       - "&7&6Carrot &8(value: &a$12&8)"
       - "&7&6Condensed Carrot &8(value: &a$24&8)"
+      - "&7"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
@@ -126,17 +142,25 @@ ow_potato_generator:
     next-generator: ow_sugarcane_generator
     upgrade-cost: 400
   item:
-    material: POTATO
+    material: BROWN_CONCRETE
     display-name: "&f&lPotato Generator"
     enchantments: [ ]
     flags: [ ]
     custom-model-data: 0
     lore:
-      - "&8Overworld Generator - Tier 3"
+      - "&8Purchasable Generator"
       - "&7"
-      - "&7Possible Drops:"
+      - "&f&lINFO"
+      - "&8Time: &f20 seconds"
+      - "&8Generator Tier: &f3"
+      - "&8Corruption Chance: &f0.23%"
+      - "&a&lUpgrade Cost: &a&n$400"
+      - "&c&lReparation Cost: &c&n$18"
+      - "&7"
+      - "&f&lPossible Drops"
       - "&7&fPotato &8(value: &a$18&8)"
       - "&7&fCondensed Potato &8(value: &a$36&8)"
+      - "&7"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
@@ -181,17 +205,25 @@ ow_sugarcane_generator:
     next-generator: ow_pumpkin_generator
     upgrade-cost: 900
   item:
-    material: SUGAR_CANE
+    material: LIME_CONCRETE
     display-name: "&a&lSugar Cane Generator"
     enchantments: [ ]
     flags: [ ]
     custom-model-data: 0
     lore:
-      - "&8Overworld Generator - Tier 4"
+      - "&8Purchasable Generator"
       - "&7"
-      - "&7Possible Drops:"
+      - "&a&lINFO"
+      - "&8Time: &f20 seconds"
+      - "&8Generator Tier: &f4"
+      - "&8Corruption Chance: &f0.22%"
+      - "&a&lUpgrade Cost: &a&n$900"
+      - "&c&lReparation Cost: &c&n$22"
+      - "&7"
+      - "&a&lPossible Drops"
       - "&7&aSugar Cane &8(value: &a$27&8)"
       - "&7&aCondensed Sugar Cane &8(value: &a$54&8)"
+      - "&7"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
@@ -242,11 +274,19 @@ ow_pumpkin_generator:
     flags: [ ]
     custom-model-data: 0
     lore:
-      - "&8Overworld Generator - Tier 5"
+      - "&8Purchasable Generator"
       - "&7"
-      - "&7Possible Drops:"
+      - "&6&lINFO"
+      - "&8Time: &f20 seconds"
+      - "&8Generator Tier: &f5"
+      - "&8Corruption Chance: &f0.21%"
+      - "&a&lUpgrade Cost: &a&n$2000"
+      - "&c&lReparation Cost: &c&n$27"
+      - "&7"
+      - "&6&lPossible Drops"
       - "&7&6Pumpkin &8(value: &a$40&8)"
       - "&7&6Condensed Pumpkin &8(value: &a$80&8)"
+      - "&7"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
@@ -297,11 +337,19 @@ ow_melon_generator:
     flags: [ ]
     custom-model-data: 0
     lore:
-      - "&8Overworld Generator - Tier 6"
+      - "&8Purchasable Generator"
       - "&7"
-      - "&7Possible Drops:"
+      - "&2&lINFO"
+      - "&8Time: &f20 seconds"
+      - "&8Generator Tier: &f6"
+      - "&8Corruption Chance: &f0.2%"
+      - "&a&lUpgrade Cost: &a&n$4500"
+      - "&c&lReparation Cost: &c&n$33"
+      - "&7"
+      - "&2&lPossible Drops"
       - "&7&2Melon Slice &8(value: &a$60&8)"
       - "&7&2Condensed Melon Slice &8(value: &a$120&8)"
+      - "&7"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
@@ -346,17 +394,25 @@ ow_cactus_generator:
     next-generator: ow_bamboo_generator
     upgrade-cost: 10000
   item:
-    material: CACTUS
+    material: GREEN_CONCRETE
     display-name: "&2&lCactus Generator"
     enchantments: [ ]
     flags: [ ]
     custom-model-data: 0
     lore:
-      - "&8Overworld Generator - Tier 7"
+      - "&8Purchasable Generator"
       - "&7"
-      - "&7Possible Drops:"
+      - "&2&lINFO"
+      - "&8Time: &f20 seconds"
+      - "&8Generator Tier: &f7"
+      - "&8Corruption Chance: &f0.19%"
+      - "&a&lUpgrade Cost: &a&n$10000"
+      - "&c&lReparation Cost: &c&n$40"
+      - "&7"
+      - "&2&lPossible Drops"
       - "&7&2Cactus &8(value: &a$90&8)"
       - "&7&2Condensed Cactus &8(value: &a$180&8)"
+      - "&7"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
@@ -402,17 +458,25 @@ ow_bamboo_generator:
     upgrade-cost: 22000
     require-level: 8
   item:
-    material: BAMBOO
+    material: BAMBOO_BLOCK
     display-name: "&a&lBamboo Generator"
     enchantments: [ ]
     flags: [ ]
     custom-model-data: 0
     lore:
-      - "&8Overworld Generator - Tier 8"
+      - "&8Purchasable Generator"
       - "&7"
-      - "&7Possible Drops:"
+      - "&a&lINFO"
+      - "&8Time: &f20 seconds"
+      - "&8Generator Tier: &f8"
+      - "&8Corruption Chance: &f0.18%"
+      - "&a&lUpgrade Cost: &a&n$22000"
+      - "&c&lReparation Cost: &c&n$48"
+      - "&7"
+      - "&a&lPossible Drops"
       - "&7&aBamboo &8(value: &a$135&8)"
       - "&7&aCondensed Bamboo &8(value: &a$270&8)"
+      - "&7"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
@@ -460,17 +524,25 @@ ow_cocoa_generator:
     shard-cost:
       greenland: 3
   item:
-    material: COCOA_BEANS
+    material: BROWN_TERRACOTTA
     display-name: "&6&lCocoa Bean Generator"
     enchantments: [ ]
     flags: [ ]
     custom-model-data: 0
     lore:
-      - "&8Overworld Generator - Tier 9"
+      - "&8Purchasable Generator"
       - "&7"
-      - "&7Possible Drops:"
+      - "&6&lINFO"
+      - "&8Time: &f20 seconds"
+      - "&8Generator Tier: &f9"
+      - "&8Corruption Chance: &f0.17%"
+      - "&a&lUpgrade Cost: &a&n$48000"
+      - "&c&lReparation Cost: &c&n$58"
+      - "&7"
+      - "&6&lPossible Drops"
       - "&7&6Cocoa Beans &8(value: &a$200&8)"
       - "&7&6Condensed Cocoa Beans &8(value: &a$400&8)"
+      - "&7"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
@@ -517,17 +589,25 @@ ow_golden_apple_generator:
     shard-cost:
       nether: 5
   item:
-    material: GOLDEN_APPLE
+    material: GOLD_BLOCK
     display-name: "&e&lGolden Apple Generator"
     enchantments: [ ]
     flags: [ ]
     custom-model-data: 0
     lore:
-      - "&8Overworld Generator - Tier 10"
+      - "&8Purchasable Generator"
       - "&7"
-      - "&7Possible Drops:"
+      - "&e&lINFO"
+      - "&8Time: &f20 seconds"
+      - "&8Generator Tier: &f10"
+      - "&8Corruption Chance: &f0.15%"
+      - "&a&lUpgrade Cost: &a&n$100000"
+      - "&c&lReparation Cost: &c&n$70"
+      - "&7"
+      - "&e&lPossible Drops"
       - "&7&eGolden Apple &8(value: &a$300&8)"
       - "&7&eCondensed Golden Apple &8(value: &a$600&8)"
+      - "&7"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':

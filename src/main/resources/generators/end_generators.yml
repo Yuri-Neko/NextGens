@@ -14,17 +14,25 @@ end_chorusfruit_generator:
     next-generator: end_poppedchorus_generator
     upgrade-cost: 35000000
   item:
-    material: CHORUS_FRUIT
+    material: PURPLE_CONCRETE
     display-name: "&d&lChorus Fruit Generator"
     enchantments: [ ]
     flags: [ ]
     custom-model-data: 0
     lore:
-      - "&8The End Generator - Tier 1"
+      - "&8Purchasable Generator"
       - "&7"
-      - "&7Possible Drops:"
+      - "&d&lINFO"
+      - "&8Time: &f20 seconds"
+      - "&8Generator Tier: &f1"
+      - "&8Corruption Chance: &f0.3%"
+      - "&a&lUpgrade Cost: &a&n$35000000"
+      - "&c&lReparation Cost: &c&n$550"
+      - "&7"
+      - "&d&lPossible Drops"
       - "&7&dChorus Fruit &8(value: &a$11000&8)"
       - "&7&dCondensed Chorus Fruit &8(value: &a$22000&8)"
+      - "&7"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
@@ -69,17 +77,25 @@ end_poppedchorus_generator:
     next-generator: end_endstone_generator
     upgrade-cost: 55000000
   item:
-    material: POPPED_CHORUS_FRUIT
+    material: MAGENTA_CONCRETE
     display-name: "&5&lPopped Chorus Fruit Generator"
     enchantments: [ ]
     flags: [ ]
     custom-model-data: 0
     lore:
-      - "&8The End Generator - Tier 2"
+      - "&8Purchasable Generator"
       - "&7"
-      - "&7Possible Drops:"
+      - "&5&lINFO"
+      - "&8Time: &f20 seconds"
+      - "&8Generator Tier: &f2"
+      - "&8Corruption Chance: &f0.29%"
+      - "&a&lUpgrade Cost: &a&n$55000000"
+      - "&c&lReparation Cost: &c&n$650"
+      - "&7"
+      - "&5&lPossible Drops"
       - "&7&5Popped Chorus Fruit &8(value: &a$15000&8)"
       - "&7&5Condensed Popped Chorus Fruit &8(value: &a$30000&8)"
+      - "&7"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
@@ -130,11 +146,19 @@ end_endstone_generator:
     flags: [ ]
     custom-model-data: 0
     lore:
-      - "&8The End Generator - Tier 3"
+      - "&8Purchasable Generator"
       - "&7"
-      - "&7Possible Drops:"
+      - "&f&lINFO"
+      - "&8Time: &f20 seconds"
+      - "&8Generator Tier: &f3"
+      - "&8Corruption Chance: &f0.28%"
+      - "&a&lUpgrade Cost: &a&n$85000000"
+      - "&c&lReparation Cost: &c&n$780"
+      - "&7"
+      - "&f&lPossible Drops"
       - "&7&fEnd Stone &8(value: &a$20000&8)"
       - "&7&fCondensed End Stone &8(value: &a$40000&8)"
+      - "&7"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
@@ -185,11 +209,19 @@ end_purpur_generator:
     flags: [ ]
     custom-model-data: 0
     lore:
-      - "&8The End Generator - Tier 4"
+      - "&8Purchasable Generator"
       - "&7"
-      - "&7Possible Drops:"
+      - "&d&lINFO"
+      - "&8Time: &f20 seconds"
+      - "&8Generator Tier: &f4"
+      - "&8Corruption Chance: &f0.27%"
+      - "&a&lUpgrade Cost: &a&n$130000000"
+      - "&c&lReparation Cost: &c&n$940"
+      - "&7"
+      - "&d&lPossible Drops"
       - "&7&dPurpur Block &8(value: &a$27000&8)"
       - "&7&dCondensed Purpur Block &8(value: &a$54000&8)"
+      - "&7"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
@@ -234,17 +266,25 @@ end_enderpearl_generator:
     next-generator: end_endereye_generator
     upgrade-cost: 200000000
   item:
-    material: ENDER_PEARL
+    material: PRISMARINE
     display-name: "&2&lEnder Pearl Generator"
     enchantments: [ ]
     flags: [ ]
     custom-model-data: 0
     lore:
-      - "&8The End Generator - Tier 5"
+      - "&8Purchasable Generator"
       - "&7"
-      - "&7Possible Drops:"
+      - "&2&lINFO"
+      - "&8Time: &f20 seconds"
+      - "&8Generator Tier: &f5"
+      - "&8Corruption Chance: &f0.26%"
+      - "&a&lUpgrade Cost: &a&n$200000000"
+      - "&c&lReparation Cost: &c&n$1130"
+      - "&7"
+      - "&2&lPossible Drops"
       - "&7&2Ender Pearl &8(value: &a$36000&8)"
       - "&7&2Condensed Ender Pearl &8(value: &a$72000&8)"
+      - "&7"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
@@ -289,17 +329,25 @@ end_endereye_generator:
     next-generator: end_shulkershell_generator
     upgrade-cost: 300000000
   item:
-    material: ENDER_EYE
+    material: END_ROD
     display-name: "&2&lEnder Eye Generator"
     enchantments: [ ]
     flags: [ ]
     custom-model-data: 0
     lore:
-      - "&8The End Generator - Tier 6"
+      - "&8Purchasable Generator"
       - "&7"
-      - "&7Possible Drops:"
+      - "&2&lINFO"
+      - "&8Time: &f20 seconds"
+      - "&8Generator Tier: &f6"
+      - "&8Corruption Chance: &f0.25%"
+      - "&a&lUpgrade Cost: &a&n$300000000"
+      - "&c&lReparation Cost: &c&n$1360"
+      - "&7"
+      - "&2&lPossible Drops"
       - "&7&2Eye of Ender &8(value: &a$48000&8)"
       - "&7&2Condensed Eye of Ender &8(value: &a$96000&8)"
+      - "&7"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
@@ -344,17 +392,25 @@ end_shulkershell_generator:
     next-generator: end_dragonbreath_generator
     upgrade-cost: 450000000
   item:
-    material: SHULKER_SHELL
+    material: SHULKER_BOX
     display-name: "&5&lShulker Shell Generator"
     enchantments: [ ]
     flags: [ ]
     custom-model-data: 0
     lore:
-      - "&8The End Generator - Tier 7"
+      - "&8Purchasable Generator"
       - "&7"
-      - "&7Possible Drops:"
+      - "&5&lINFO"
+      - "&8Time: &f20 seconds"
+      - "&8Generator Tier: &f7"
+      - "&8Corruption Chance: &f0.23%"
+      - "&a&lUpgrade Cost: &a&n$450000000"
+      - "&c&lReparation Cost: &c&n$1630"
+      - "&7"
+      - "&5&lPossible Drops"
       - "&7&5Shulker Shell &8(value: &a$65000&8)"
       - "&7&5Condensed Shulker Shell &8(value: &a$130000&8)"
+      - "&7"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
@@ -399,17 +455,25 @@ end_dragonbreath_generator:
     next-generator: end_endcrystal_generator
     upgrade-cost: 650000000
   item:
-    material: DRAGON_BREATH
+    material: MAGENTA_STAINED_GLASS
     display-name: "&d&lDragon's Breath Generator"
     enchantments: [ ]
     flags: [ ]
     custom-model-data: 0
     lore:
-      - "&8The End Generator - Tier 8"
+      - "&8Purchasable Generator"
       - "&7"
-      - "&7Possible Drops:"
+      - "&d&lINFO"
+      - "&8Time: &f20 seconds"
+      - "&8Generator Tier: &f8"
+      - "&8Corruption Chance: &f0.21%"
+      - "&a&lUpgrade Cost: &a&n$650000000"
+      - "&c&lReparation Cost: &c&n$1960"
+      - "&7"
+      - "&d&lPossible Drops"
       - "&7&dDragon's Breath &8(value: &a$88000&8)"
       - "&7&dCondensed Dragon's Breath &8(value: &a$176000&8)"
+      - "&7"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
@@ -454,17 +518,25 @@ end_endcrystal_generator:
     next-generator: end_dragonegg_generator
     upgrade-cost: 900000000
   item:
-    material: END_CRYSTAL
+    material: END_STONE_BRICKS
     display-name: "&f&lEnd Crystal Generator"
     enchantments: [ ]
     flags: [ ]
     custom-model-data: 0
     lore:
-      - "&8The End Generator - Tier 9"
+      - "&8Purchasable Generator"
       - "&7"
-      - "&7Possible Drops:"
+      - "&f&lINFO"
+      - "&8Time: &f20 seconds"
+      - "&8Generator Tier: &f9"
+      - "&8Corruption Chance: &f0.19%"
+      - "&a&lUpgrade Cost: &a&n$900000000"
+      - "&c&lReparation Cost: &c&n$2350"
+      - "&7"
+      - "&f&lPossible Drops"
       - "&7&fEnd Crystal &8(value: &a$120000&8)"
       - "&7&fCondensed End Crystal &8(value: &a$240000&8)"
+      - "&7"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
@@ -509,17 +581,25 @@ end_dragonegg_generator:
     next-generator: null
     upgrade-cost: 0
   item:
-    material: DRAGON_EGG
+    material: BEACON
     display-name: "&5&lDragon Egg Generator"
     enchantments: [ ]
     flags: [ ]
     custom-model-data: 0
     lore:
-      - "&8The End Generator - Tier 10"
+      - "&8Purchasable Generator"
       - "&7"
-      - "&7Possible Drops:"
+      - "&5&lINFO"
+      - "&8Time: &f20 seconds"
+      - "&8Generator Tier: &f10"
+      - "&8Corruption Chance: &f0.15%"
+      - "&a&lUpgrade Cost: &a&nUn-Upgradable"
+      - "&c&lReparation Cost: &c&n$3000"
+      - "&7"
+      - "&5&lPossible Drops"
       - "&7&5Dragon Egg &8(value: &a$500000&8)"
       - "&7&5Condensed Dragon Egg &8(value: &a$1000000&8)"
+      - "&7"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':

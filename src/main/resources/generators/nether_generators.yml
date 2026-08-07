@@ -19,17 +19,25 @@ nt_netherwart_generator:
     shard-cost:
       nether: 2
   item:
-    material: NETHER_WART
+    material: NETHER_WART_BLOCK
     display-name: "&4&lNether Wart Generator"
     enchantments: [ ]
     flags: [ ]
     custom-model-data: 0
     lore:
-      - "&8Nether Generator - Tier 1"
+      - "&8Purchasable Generator"
       - "&7"
-      - "&7Possible Drops:"
+      - "&4&lINFO"
+      - "&8Time: &f20 seconds"
+      - "&8Generator Tier: &f1"
+      - "&8Corruption Chance: &f0.28%"
+      - "&a&lUpgrade Cost: &a&n$150000"
+      - "&c&lReparation Cost: &c&n$85"
+      - "&7"
+      - "&4&lPossible Drops"
       - "&7&4Nether Wart &8(value: &a$450&8)"
       - "&7&4Condensed Nether Wart &8(value: &a$900&8)"
+      - "&7"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
@@ -82,11 +90,19 @@ nt_soulsand_generator:
     flags: [ ]
     custom-model-data: 0
     lore:
-      - "&8Nether Generator - Tier 2"
+      - "&8Purchasable Generator"
       - "&7"
-      - "&7Possible Drops:"
+      - "&8&lINFO"
+      - "&8Time: &f20 seconds"
+      - "&8Generator Tier: &f2"
+      - "&8Corruption Chance: &f0.27%"
+      - "&a&lUpgrade Cost: &a&n$300000"
+      - "&c&lReparation Cost: &c&n$100"
+      - "&7"
+      - "&8&lPossible Drops"
       - "&7&8Soul Sand &8(value: &a$650&8)"
       - "&7&8Condensed Soul Sand &8(value: &a$1300&8)"
+      - "&7"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
@@ -139,11 +155,19 @@ nt_glowstone_generator:
     flags: [ ]
     custom-model-data: 0
     lore:
-      - "&8Nether Generator - Tier 3"
+      - "&8Purchasable Generator"
       - "&7"
-      - "&7Possible Drops:"
+      - "&e&lINFO"
+      - "&8Time: &f20 seconds"
+      - "&8Generator Tier: &f3"
+      - "&8Corruption Chance: &f0.26%"
+      - "&a&lUpgrade Cost: &a&n$550000"
+      - "&c&lReparation Cost: &c&n$120"
+      - "&7"
+      - "&e&lPossible Drops"
       - "&7&eGlowstone Dust &8(value: &a$900&8)"
       - "&7&eCondensed Glowstone Dust &8(value: &a$1800&8)"
+      - "&7"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
@@ -196,11 +220,19 @@ nt_quartz_generator:
     flags: [ ]
     custom-model-data: 0
     lore:
-      - "&8Nether Generator - Tier 4"
+      - "&8Purchasable Generator"
       - "&7"
-      - "&7Possible Drops:"
+      - "&f&lINFO"
+      - "&8Time: &f20 seconds"
+      - "&8Generator Tier: &f4"
+      - "&8Corruption Chance: &f0.25%"
+      - "&a&lUpgrade Cost: &a&n$950000"
+      - "&c&lReparation Cost: &c&n$145"
+      - "&7"
+      - "&f&lPossible Drops"
       - "&7&fQuartz &8(value: &a$1300&8)"
       - "&7&fCondensed Quartz &8(value: &a$2600&8)"
+      - "&7"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
@@ -247,17 +279,25 @@ nt_magmacream_generator:
     shard-cost:
       nether: 3
   item:
-    material: MAGMA_CREAM
+    material: MAGMA_BLOCK
     display-name: "&c&lMagma Cream Generator"
     enchantments: [ ]
     flags: [ ]
     custom-model-data: 0
     lore:
-      - "&8Nether Generator - Tier 5"
+      - "&8Purchasable Generator"
       - "&7"
-      - "&7Possible Drops:"
+      - "&c&lINFO"
+      - "&8Time: &f20 seconds"
+      - "&8Generator Tier: &f5"
+      - "&8Corruption Chance: &f0.24%"
+      - "&a&lUpgrade Cost: &a&n$1600000"
+      - "&c&lReparation Cost: &c&n$175"
+      - "&7"
+      - "&c&lPossible Drops"
       - "&7&cMagma Cream &8(value: &a$1800&8)"
       - "&7&cCondensed Magma Cream &8(value: &a$3600&8)"
+      - "&7"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
@@ -304,17 +344,25 @@ nt_blazepowder_generator:
     shard-cost:
       nether: 4
   item:
-    material: BLAZE_ROD
+    material: YELLOW_TERRACOTTA
     display-name: "&e&lBlaze Powder Generator"
     enchantments: [ ]
     flags: [ ]
     custom-model-data: 0
     lore:
-      - "&8Nether Generator - Tier 6"
+      - "&8Purchasable Generator"
       - "&7"
-      - "&7Possible Drops:"
+      - "&e&lINFO"
+      - "&8Time: &f20 seconds"
+      - "&8Generator Tier: &f6"
+      - "&8Corruption Chance: &f0.23%"
+      - "&a&lUpgrade Cost: &a&n$2700000"
+      - "&c&lReparation Cost: &c&n$210"
+      - "&7"
+      - "&e&lPossible Drops"
       - "&7&eBlaze Powder &8(value: &a$2500&8)"
       - "&7&eCondensed Blaze Powder &8(value: &a$5000&8)"
+      - "&7"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
@@ -361,17 +409,25 @@ nt_crimsonfungus_generator:
     shard-cost:
       nether: 4
   item:
-    material: CRIMSON_FUNGUS
+    material: CRIMSON_PLANKS
     display-name: "&c&lCrimson Fungus Generator"
     enchantments: [ ]
     flags: [ ]
     custom-model-data: 0
     lore:
-      - "&8Nether Generator - Tier 7"
+      - "&8Purchasable Generator"
       - "&7"
-      - "&7Possible Drops:"
+      - "&c&lINFO"
+      - "&8Time: &f20 seconds"
+      - "&8Generator Tier: &f7"
+      - "&8Corruption Chance: &f0.22%"
+      - "&a&lUpgrade Cost: &a&n$4500000"
+      - "&c&lReparation Cost: &c&n$255"
+      - "&7"
+      - "&c&lPossible Drops"
       - "&7&cCrimson Fungus &8(value: &a$3400&8)"
       - "&7&cCondensed Crimson Fungus &8(value: &a$6800&8)"
+      - "&7"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
@@ -424,11 +480,19 @@ nt_nethergold_generator:
     flags: [ ]
     custom-model-data: 0
     lore:
-      - "&8Nether Generator - Tier 8"
+      - "&8Purchasable Generator"
       - "&7"
-      - "&7Possible Drops:"
+      - "&6&lINFO"
+      - "&8Time: &f20 seconds"
+      - "&8Generator Tier: &f8"
+      - "&8Corruption Chance: &f0.21%"
+      - "&a&lUpgrade Cost: &a&n$7500000"
+      - "&c&lReparation Cost: &c&n$305"
+      - "&7"
+      - "&6&lPossible Drops"
       - "&7&6Gold Nugget &8(value: &a$4600&8)"
       - "&7&6Condensed Gold Nugget &8(value: &a$9200&8)"
+      - "&7"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
@@ -481,11 +545,19 @@ nt_ancientdebris_generator:
     flags: [ ]
     custom-model-data: 0
     lore:
-      - "&8Nether Generator - Tier 9"
+      - "&8Purchasable Generator"
       - "&7"
-      - "&7Possible Drops:"
+      - "&8&lINFO"
+      - "&8Time: &f20 seconds"
+      - "&8Generator Tier: &f9"
+      - "&8Corruption Chance: &f0.2%"
+      - "&a&lUpgrade Cost: &a&n$12500000"
+      - "&c&lReparation Cost: &c&n$370"
+      - "&7"
+      - "&8&lPossible Drops"
       - "&7&8Ancient Debris &8(value: &a$6200&8)"
       - "&7&8Condensed Ancient Debris &8(value: &a$12400&8)"
+      - "&7"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
@@ -532,17 +604,25 @@ nt_netherite_generator:
     shard-cost:
       end: 5
   item:
-    material: NETHERITE_SCRAP
+    material: NETHERITE_BLOCK
     display-name: "&8&lNetherite Generator"
     enchantments: [ ]
     flags: [ ]
     custom-model-data: 0
     lore:
-      - "&8Nether Generator - Tier 10"
+      - "&8Purchasable Generator"
       - "&7"
-      - "&7Possible Drops:"
+      - "&8&lINFO"
+      - "&8Time: &f20 seconds"
+      - "&8Generator Tier: &f10"
+      - "&8Corruption Chance: &f0.18%"
+      - "&a&lUpgrade Cost: &a&n$20000000"
+      - "&c&lReparation Cost: &c&n$450"
+      - "&7"
+      - "&8&lPossible Drops"
       - "&7&8Netherite Scrap &8(value: &a$8500&8)"
       - "&7&8Condensed Netherite Scrap &8(value: &a$17000&8)"
+      - "&7"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
