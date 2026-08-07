@@ -1,0 +1,3 @@
+
+[+] Every internal tier upgrade across all 3 dimensions (27 total: 9 Overworld, 9 Nether, 9 The End) now has the full requirement set: money + require-level + reduce-level + require-prestige (gate only, never consumed) + that dimension's own shard type
+[+] Overworld gained reduce-level (was missing it); Nether and The End gained require-level/reduce-level/require-prestige (only had shard-cost before)

@@ -13,6 +13,11 @@ end_chorusfruit_generator:
   upgrade:
     next-generator: end_poppedchorus_generator
     upgrade-cost: 35000000
+    require-level: 42
+    reduce-level: 5
+    require-prestige: 3
+    shard-cost:
+      end: 1
   item:
     material: PURPLE_CONCRETE
     display-name: "&d&lChorus Fruit Generator"
@@ -78,6 +83,11 @@ end_poppedchorus_generator:
   upgrade:
     next-generator: end_endstone_generator
     upgrade-cost: 55000000
+    require-level: 44
+    reduce-level: 5
+    require-prestige: 3
+    shard-cost:
+      end: 1
   item:
     material: MAGENTA_CONCRETE
     display-name: "&5&lPopped Chorus Fruit Generator"
@@ -143,6 +153,11 @@ end_endstone_generator:
   upgrade:
     next-generator: end_purpur_generator
     upgrade-cost: 85000000
+    require-level: 46
+    reduce-level: 6
+    require-prestige: 3
+    shard-cost:
+      end: 2
   item:
     material: END_STONE
     display-name: "&f&lEnd Stone Generator"
@@ -208,6 +223,11 @@ end_purpur_generator:
   upgrade:
     next-generator: end_enderpearl_generator
     upgrade-cost: 130000000
+    require-level: 48
+    reduce-level: 6
+    require-prestige: 3
+    shard-cost:
+      end: 2
   item:
     material: PURPUR_BLOCK
     display-name: "&d&lPurpur Generator"
@@ -273,6 +293,11 @@ end_enderpearl_generator:
   upgrade:
     next-generator: end_endereye_generator
     upgrade-cost: 200000000
+    require-level: 50
+    reduce-level: 7
+    require-prestige: 3
+    shard-cost:
+      end: 3
   item:
     material: PRISMARINE
     display-name: "&2&lEnder Pearl Generator"
@@ -338,6 +363,11 @@ end_endereye_generator:
   upgrade:
     next-generator: end_shulkershell_generator
     upgrade-cost: 300000000
+    require-level: 52
+    reduce-level: 7
+    require-prestige: 3
+    shard-cost:
+      end: 3
   item:
     material: END_ROD
     display-name: "&2&lEnder Eye Generator"
@@ -403,6 +433,11 @@ end_shulkershell_generator:
   upgrade:
     next-generator: end_dragonbreath_generator
     upgrade-cost: 450000000
+    require-level: 54
+    reduce-level: 8
+    require-prestige: 3
+    shard-cost:
+      end: 4
   item:
     material: SHULKER_BOX
     display-name: "&5&lShulker Shell Generator"
@@ -468,6 +503,11 @@ end_dragonbreath_generator:
   upgrade:
     next-generator: end_endcrystal_generator
     upgrade-cost: 650000000
+    require-level: 56
+    reduce-level: 8
+    require-prestige: 3
+    shard-cost:
+      end: 4
   item:
     material: MAGENTA_STAINED_GLASS
     display-name: "&d&lDragon's Breath Generator"
@@ -533,6 +573,11 @@ end_endcrystal_generator:
   upgrade:
     next-generator: end_dragonegg_generator
     upgrade-cost: 900000000
+    require-level: 58
+    reduce-level: 9
+    require-prestige: 3
+    shard-cost:
+      end: 5
   item:
     material: END_STONE_BRICKS
     display-name: "&f&lEnd Crystal Generator"

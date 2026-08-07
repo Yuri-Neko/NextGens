@@ -16,6 +16,7 @@ ow_wheat_generator:
     next-generator: ow_carrot_generator
     upgrade-cost: 50
     require-level: 3
+    reduce-level: 1
     require-prestige: 1
     shard-cost:
       greenland: 1
@@ -85,6 +86,7 @@ ow_carrot_generator:
     next-generator: ow_potato_generator
     upgrade-cost: 150
     require-level: 5
+    reduce-level: 1
     require-prestige: 1
     shard-cost:
       greenland: 1
@@ -154,6 +156,7 @@ ow_potato_generator:
     next-generator: ow_sugarcane_generator
     upgrade-cost: 400
     require-level: 7
+    reduce-level: 2
     require-prestige: 1
     shard-cost:
       greenland: 2
@@ -223,6 +226,7 @@ ow_sugarcane_generator:
     next-generator: ow_pumpkin_generator
     upgrade-cost: 900
     require-level: 9
+    reduce-level: 2
     require-prestige: 1
     shard-cost:
       greenland: 2
@@ -292,6 +296,7 @@ ow_pumpkin_generator:
     next-generator: ow_melon_generator
     upgrade-cost: 2000
     require-level: 11
+    reduce-level: 3
     require-prestige: 1
     shard-cost:
       greenland: 3
@@ -361,6 +366,7 @@ ow_melon_generator:
     next-generator: ow_cactus_generator
     upgrade-cost: 4500
     require-level: 13
+    reduce-level: 3
     require-prestige: 1
     shard-cost:
       greenland: 3
@@ -430,6 +436,7 @@ ow_cactus_generator:
     next-generator: ow_bamboo_generator
     upgrade-cost: 10000
     require-level: 15
+    reduce-level: 4
     require-prestige: 1
     shard-cost:
       greenland: 4
@@ -499,6 +506,7 @@ ow_bamboo_generator:
     next-generator: ow_cocoa_generator
     upgrade-cost: 22000
     require-level: 17
+    reduce-level: 4
     require-prestige: 1
     shard-cost:
       greenland: 4
@@ -568,6 +576,7 @@ ow_cocoa_generator:
     next-generator: ow_golden_apple_generator
     upgrade-cost: 48000
     require-level: 19
+    reduce-level: 5
     require-prestige: 1
     shard-cost:
       greenland: 5

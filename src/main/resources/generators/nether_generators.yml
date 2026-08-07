@@ -16,8 +16,11 @@ nt_netherwart_generator:
   upgrade:
     next-generator: nt_soulsand_generator
     upgrade-cost: 150000
+    require-level: 22
+    reduce-level: 2
+    require-prestige: 2
     shard-cost:
-      nether: 2
+      nether: 1
   item:
     material: NETHER_WART_BLOCK
     display-name: "&4&lNether Wart Generator"
@@ -83,8 +86,11 @@ nt_soulsand_generator:
   upgrade:
     next-generator: nt_glowstone_generator
     upgrade-cost: 300000
+    require-level: 24
+    reduce-level: 2
+    require-prestige: 2
     shard-cost:
-      nether: 2
+      nether: 1
   item:
     material: SOUL_SAND
     display-name: "&8&lSoul Sand Generator"
@@ -150,8 +156,11 @@ nt_glowstone_generator:
   upgrade:
     next-generator: nt_quartz_generator
     upgrade-cost: 550000
+    require-level: 26
+    reduce-level: 3
+    require-prestige: 2
     shard-cost:
-      nether: 3
+      nether: 2
   item:
     material: GLOWSTONE
     display-name: "&e&lGlowstone Generator"
@@ -217,8 +226,11 @@ nt_quartz_generator:
   upgrade:
     next-generator: nt_magmacream_generator
     upgrade-cost: 950000
+    require-level: 28
+    reduce-level: 3
+    require-prestige: 2
     shard-cost:
-      nether: 3
+      nether: 2
   item:
     material: NETHER_QUARTZ_ORE
     display-name: "&f&lQuartz Generator"
@@ -284,6 +296,9 @@ nt_magmacream_generator:
   upgrade:
     next-generator: nt_blazepowder_generator
     upgrade-cost: 1600000
+    require-level: 30
+    reduce-level: 4
+    require-prestige: 2
     shard-cost:
       nether: 3
   item:
@@ -351,8 +366,11 @@ nt_blazepowder_generator:
   upgrade:
     next-generator: nt_crimsonfungus_generator
     upgrade-cost: 2700000
+    require-level: 32
+    reduce-level: 4
+    require-prestige: 2
     shard-cost:
-      nether: 4
+      nether: 3
   item:
     material: YELLOW_TERRACOTTA
     display-name: "&e&lBlaze Powder Generator"
@@ -418,6 +436,9 @@ nt_crimsonfungus_generator:
   upgrade:
     next-generator: nt_nethergold_generator
     upgrade-cost: 4500000
+    require-level: 34
+    reduce-level: 5
+    require-prestige: 2
     shard-cost:
       nether: 4
   item:
@@ -485,6 +506,9 @@ nt_nethergold_generator:
   upgrade:
     next-generator: nt_ancientdebris_generator
     upgrade-cost: 7500000
+    require-level: 36
+    reduce-level: 5
+    require-prestige: 2
     shard-cost:
       nether: 4
   item:
@@ -552,6 +576,9 @@ nt_ancientdebris_generator:
   upgrade:
     next-generator: nt_netherite_generator
     upgrade-cost: 12500000
+    require-level: 38
+    reduce-level: 6
+    require-prestige: 2
     shard-cost:
       nether: 5
   item:
