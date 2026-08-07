@@ -11,6 +11,10 @@ import org.bukkit.entity.Player;
 public class SellDataCalculator {
 
     public static SellData calculateSellData(Player player, User user, SellwandData sellwand, double totalValue, int totalItems) {
+        return calculateSellData(player, user, sellwand, totalValue, totalItems, 0);
+    }
+
+    public static SellData calculateSellData(Player player, User user, SellwandData sellwand, double totalValue, int totalItems, double totalExp) {
         double totalMultiplier = 0;
 
         // Get all multipliers
@@ -37,7 +41,7 @@ public class SellDataCalculator {
             finalAmount = totalValue * totalMultiplier;
         }
 
-        return new SellData(user, finalAmount, totalItems, totalMultiplier, sellwand);
+        return new SellData(user, finalAmount, totalItems, totalMultiplier, sellwand, totalExp);
     }
 
 }

@@ -1,0 +1,4 @@
+
+[!] FIX: hand-sell, /sell command, and sellwand never granted NextGensLevels EXP at all - SellManager#performSell now tracks exp per item (baked into the drop via PDC) and exposes it on SellData/SellEvent
+[!] FIX: the instant auto-sell-on-drop path (nextgens.autosell.gens permission) bypassed the full sell-multiplier registry entirely (only got its own worth, no event/permission/world/prestige/armor multipliers) - now delegates to the same performSell() logic as every other sell path
+[+] New GeneratorAPI#getExpReward(ItemStack) and SellData#getTotalExp()

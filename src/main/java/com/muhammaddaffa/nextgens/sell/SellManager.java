@@ -35,18 +35,23 @@ public class SellManager {
         this.eventManager = eventManager;
     }
 
+    /**
+     * Dipakai NextGens sendiri buat auto-sell instan saat generator drop (permission
+     * nextgens.autosell.gens, lihat GeneratorTask) - SATU item, langsung, tanpa nunggu
+     * dikumpulin ke inventory dulu. Sengaja delegasi ke {@link #performSell} (dengan
+     * inventory sementara 1 slot) supaya rumusnya PERSIS sama dengan hand-sell/{@code /sell}
+     * /sellwand - termasuk seluruh sell-multiplier registry dan SellEvent-nya - bukan
+     * hitungan sendiri yang gampang ketinggalan kalau salah satu dari itu berubah.
+     */
     public boolean sell(Player player, ItemStack stack) {
-        GeneratorAPI api = NextGens.getApi();
-        User user = userManager.getUser(player);
-        Double value = api.getWorth(stack);
-        if (value == null) return false;
-        // Sell the item
-        VaultEconomy.deposit(player, value);
-        // Update statistics
-        user.addEarnings(value);
-        user.addItemsSold(stack.getAmount());
-        // Remove the item
-        stack.setAmount(0);
+        Inventory temp = Bukkit.createInventory(null, 9);
+        temp.setItem(0, stack);
+        SellData data = this.performSell(player, null, true, temp);
+        if (data == null) {
+            return false;
+        }
+        // performSell() sudah mengosongkan stack aslinya (referensi yang sama, hanya
+        // dipindah ke inventory sementara di atas) - tidak perlu diulang di sini.
         return true;
     }
 
@@ -65,6 +70,7 @@ public class SellManager {
     public SellData performSell(Player player, SellwandData sellwand, boolean silent, @Nullable Block block, Inventory... inventories) {
         GeneratorAPI api = NextGens.getApi();
         double totalValue = 0.0;
+        double totalExp = 0.0;
         int totalItems = 0;
 
         // Aggregate sellable items
@@ -79,6 +85,9 @@ public class SellManager {
                 // Otherwise, we should add it
                 totalItems += stack.getAmount();
                 totalValue += worth;
+                // NextGensLevels exp reward baked into the item's PDC (generators.yml
+                // "exp" field, see Drop#getItem) - read it BEFORE the item gets wiped below.
+                totalExp += api.getExpReward(stack);
                 // Remove the item completely, double remove to make sure
                 stack.setAmount(0);
                 inventory.setItem(i, null);
@@ -94,7 +103,7 @@ public class SellManager {
         }
 
         User user = userManager.getUser(player);
-        SellData sellData = SellDataCalculator.calculateSellData(player, user, sellwand, totalValue, totalItems);
+        SellData sellData = SellDataCalculator.calculateSellData(player, user, sellwand, totalValue, totalItems, totalExp);
 
         SellEvent sellEvent = (sellwand != null) ? new SellwandUseEvent(player, user, sellData, block)
                 : new SellCommandUseEvent(player, user, sellData);
