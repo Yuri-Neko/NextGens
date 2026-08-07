@@ -24,10 +24,13 @@ ow_wheat_generator:
     lore:
       - "&8Overworld Generator - Tier 1"
       - "&7"
+      - "&7Possible Drops:"
+      - "&7&eWheat &8(value: &a$8&8)"
+      - "&7&eCondensed Wheat &8(value: &a$16&8)"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
-      chance: 100
+      chance: 85
       sell-value: 8
       commands: [ ]
       item:
@@ -40,7 +43,22 @@ ow_wheat_generator:
           - "&8Generator Drop - Overworld Tier 1"
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$8"
-
+    '1':
+      chance: 15
+      sell-value: 16
+      commands: [ ]
+      item:
+        material: WHEAT
+        display-name: "&eCondensed Wheat &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Overworld Tier 1"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$16"
+          - "&7"
+          - "&e&lCONDENSED DROP!"
 ow_carrot_generator:
   display-name: "&6&lCarrot Generator"
   world-type: OVERWORLD
@@ -61,10 +79,13 @@ ow_carrot_generator:
     lore:
       - "&8Overworld Generator - Tier 2"
       - "&7"
+      - "&7Possible Drops:"
+      - "&7&6Carrot &8(value: &a$12&8)"
+      - "&7&6Condensed Carrot &8(value: &a$24&8)"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
-      chance: 100
+      chance: 85
       sell-value: 12
       commands: [ ]
       item:
@@ -77,7 +98,22 @@ ow_carrot_generator:
           - "&8Generator Drop - Overworld Tier 2"
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$12"
-
+    '1':
+      chance: 15
+      sell-value: 24
+      commands: [ ]
+      item:
+        material: CARROT
+        display-name: "&6Condensed Carrot &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Overworld Tier 2"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$24"
+          - "&7"
+          - "&e&lCONDENSED DROP!"
 ow_potato_generator:
   display-name: "&f&lPotato Generator"
   world-type: OVERWORLD
@@ -98,10 +134,13 @@ ow_potato_generator:
     lore:
       - "&8Overworld Generator - Tier 3"
       - "&7"
+      - "&7Possible Drops:"
+      - "&7&fPotato &8(value: &a$18&8)"
+      - "&7&fCondensed Potato &8(value: &a$36&8)"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
-      chance: 100
+      chance: 85
       sell-value: 18
       commands: [ ]
       item:
@@ -114,7 +153,22 @@ ow_potato_generator:
           - "&8Generator Drop - Overworld Tier 3"
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$18"
-
+    '1':
+      chance: 15
+      sell-value: 36
+      commands: [ ]
+      item:
+        material: POTATO
+        display-name: "&fCondensed Potato &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Overworld Tier 3"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$36"
+          - "&7"
+          - "&e&lCONDENSED DROP!"
 ow_sugarcane_generator:
   display-name: "&a&lSugar Cane Generator"
   world-type: OVERWORLD
@@ -135,10 +189,13 @@ ow_sugarcane_generator:
     lore:
       - "&8Overworld Generator - Tier 4"
       - "&7"
+      - "&7Possible Drops:"
+      - "&7&aSugar Cane &8(value: &a$27&8)"
+      - "&7&aCondensed Sugar Cane &8(value: &a$54&8)"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
-      chance: 100
+      chance: 85
       sell-value: 27
       commands: [ ]
       item:
@@ -151,7 +208,22 @@ ow_sugarcane_generator:
           - "&8Generator Drop - Overworld Tier 4"
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$27"
-
+    '1':
+      chance: 15
+      sell-value: 54
+      commands: [ ]
+      item:
+        material: SUGAR_CANE
+        display-name: "&aCondensed Sugar Cane &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Overworld Tier 4"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$54"
+          - "&7"
+          - "&e&lCONDENSED DROP!"
 ow_pumpkin_generator:
   display-name: "&6&lPumpkin Generator"
   world-type: OVERWORLD
@@ -172,10 +244,13 @@ ow_pumpkin_generator:
     lore:
       - "&8Overworld Generator - Tier 5"
       - "&7"
+      - "&7Possible Drops:"
+      - "&7&6Pumpkin &8(value: &a$40&8)"
+      - "&7&6Condensed Pumpkin &8(value: &a$80&8)"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
-      chance: 100
+      chance: 85
       sell-value: 40
       commands: [ ]
       item:
@@ -188,7 +263,22 @@ ow_pumpkin_generator:
           - "&8Generator Drop - Overworld Tier 5"
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$40"
-
+    '1':
+      chance: 15
+      sell-value: 80
+      commands: [ ]
+      item:
+        material: PUMPKIN
+        display-name: "&6Condensed Pumpkin &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Overworld Tier 5"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$80"
+          - "&7"
+          - "&e&lCONDENSED DROP!"
 ow_melon_generator:
   display-name: "&2&lMelon Generator"
   world-type: OVERWORLD
@@ -209,10 +299,13 @@ ow_melon_generator:
     lore:
       - "&8Overworld Generator - Tier 6"
       - "&7"
+      - "&7Possible Drops:"
+      - "&7&2Melon Slice &8(value: &a$60&8)"
+      - "&7&2Condensed Melon Slice &8(value: &a$120&8)"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
-      chance: 100
+      chance: 85
       sell-value: 60
       commands: [ ]
       item:
@@ -225,7 +318,22 @@ ow_melon_generator:
           - "&8Generator Drop - Overworld Tier 6"
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$60"
-
+    '1':
+      chance: 15
+      sell-value: 120
+      commands: [ ]
+      item:
+        material: MELON_SLICE
+        display-name: "&2Condensed Melon Slice &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Overworld Tier 6"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$120"
+          - "&7"
+          - "&e&lCONDENSED DROP!"
 ow_cactus_generator:
   display-name: "&2&lCactus Generator"
   world-type: OVERWORLD
@@ -246,10 +354,13 @@ ow_cactus_generator:
     lore:
       - "&8Overworld Generator - Tier 7"
       - "&7"
+      - "&7Possible Drops:"
+      - "&7&2Cactus &8(value: &a$90&8)"
+      - "&7&2Condensed Cactus &8(value: &a$180&8)"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
-      chance: 100
+      chance: 85
       sell-value: 90
       commands: [ ]
       item:
@@ -262,7 +373,22 @@ ow_cactus_generator:
           - "&8Generator Drop - Overworld Tier 7"
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$90"
-
+    '1':
+      chance: 15
+      sell-value: 180
+      commands: [ ]
+      item:
+        material: CACTUS
+        display-name: "&2Condensed Cactus &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Overworld Tier 7"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$180"
+          - "&7"
+          - "&e&lCONDENSED DROP!"
 ow_bamboo_generator:
   display-name: "&a&lBamboo Generator"
   world-type: OVERWORLD
@@ -284,10 +410,13 @@ ow_bamboo_generator:
     lore:
       - "&8Overworld Generator - Tier 8"
       - "&7"
+      - "&7Possible Drops:"
+      - "&7&aBamboo &8(value: &a$135&8)"
+      - "&7&aCondensed Bamboo &8(value: &a$270&8)"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
-      chance: 100
+      chance: 85
       sell-value: 135
       commands: [ ]
       item:
@@ -300,7 +429,22 @@ ow_bamboo_generator:
           - "&8Generator Drop - Overworld Tier 8"
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$135"
-
+    '1':
+      chance: 15
+      sell-value: 270
+      commands: [ ]
+      item:
+        material: BAMBOO
+        display-name: "&aCondensed Bamboo &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Overworld Tier 8"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$270"
+          - "&7"
+          - "&e&lCONDENSED DROP!"
 ow_cocoa_generator:
   display-name: "&6&lCocoa Bean Generator"
   world-type: OVERWORLD
@@ -324,10 +468,13 @@ ow_cocoa_generator:
     lore:
       - "&8Overworld Generator - Tier 9"
       - "&7"
+      - "&7Possible Drops:"
+      - "&7&6Cocoa Beans &8(value: &a$200&8)"
+      - "&7&6Condensed Cocoa Beans &8(value: &a$400&8)"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
-      chance: 100
+      chance: 85
       sell-value: 200
       commands: [ ]
       item:
@@ -340,7 +487,22 @@ ow_cocoa_generator:
           - "&8Generator Drop - Overworld Tier 9"
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$200"
-
+    '1':
+      chance: 15
+      sell-value: 400
+      commands: [ ]
+      item:
+        material: COCOA_BEANS
+        display-name: "&6Condensed Cocoa Beans &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Overworld Tier 9"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$400"
+          - "&7"
+          - "&e&lCONDENSED DROP!"
 ow_golden_apple_generator:
   display-name: "&e&lGolden Apple Generator"
   world-type: OVERWORLD
@@ -363,10 +525,13 @@ ow_golden_apple_generator:
     lore:
       - "&8Overworld Generator - Tier 10"
       - "&7"
+      - "&7Possible Drops:"
+      - "&7&eGolden Apple &8(value: &a$300&8)"
+      - "&7&eCondensed Golden Apple &8(value: &a$600&8)"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
-      chance: 100
+      chance: 85
       sell-value: 300
       commands: [ ]
       item:
@@ -379,3 +544,19 @@ ow_golden_apple_generator:
           - "&8Generator Drop - Overworld Tier 10"
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$300"
+    '1':
+      chance: 15
+      sell-value: 600
+      commands: [ ]
+      item:
+        material: GOLDEN_APPLE
+        display-name: "&eCondensed Golden Apple &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Overworld Tier 10"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$600"
+          - "&7"
+          - "&e&lCONDENSED DROP!"

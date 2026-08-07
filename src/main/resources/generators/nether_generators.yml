@@ -27,10 +27,13 @@ nt_netherwart_generator:
     lore:
       - "&8Nether Generator - Tier 1"
       - "&7"
+      - "&7Possible Drops:"
+      - "&7&4Nether Wart &8(value: &a$450&8)"
+      - "&7&4Condensed Nether Wart &8(value: &a$900&8)"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
-      chance: 100
+      chance: 85
       sell-value: 450
       commands: [ ]
       item:
@@ -43,7 +46,22 @@ nt_netherwart_generator:
           - "&8Generator Drop - Nether Tier 1"
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$450"
-
+    '1':
+      chance: 15
+      sell-value: 900
+      commands: [ ]
+      item:
+        material: NETHER_WART
+        display-name: "&4Condensed Nether Wart &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Nether Tier 1"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$900"
+          - "&7"
+          - "&e&lCONDENSED DROP!"
 nt_soulsand_generator:
   display-name: "&8&lSoul Sand Generator"
   world-type: NETHER
@@ -66,10 +84,13 @@ nt_soulsand_generator:
     lore:
       - "&8Nether Generator - Tier 2"
       - "&7"
+      - "&7Possible Drops:"
+      - "&7&8Soul Sand &8(value: &a$650&8)"
+      - "&7&8Condensed Soul Sand &8(value: &a$1300&8)"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
-      chance: 100
+      chance: 85
       sell-value: 650
       commands: [ ]
       item:
@@ -82,7 +103,22 @@ nt_soulsand_generator:
           - "&8Generator Drop - Nether Tier 2"
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$650"
-
+    '1':
+      chance: 15
+      sell-value: 1300
+      commands: [ ]
+      item:
+        material: SOUL_SAND
+        display-name: "&8Condensed Soul Sand &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Nether Tier 2"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$1300"
+          - "&7"
+          - "&e&lCONDENSED DROP!"
 nt_glowstone_generator:
   display-name: "&e&lGlowstone Generator"
   world-type: NETHER
@@ -105,10 +141,13 @@ nt_glowstone_generator:
     lore:
       - "&8Nether Generator - Tier 3"
       - "&7"
+      - "&7Possible Drops:"
+      - "&7&eGlowstone Dust &8(value: &a$900&8)"
+      - "&7&eCondensed Glowstone Dust &8(value: &a$1800&8)"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
-      chance: 100
+      chance: 85
       sell-value: 900
       commands: [ ]
       item:
@@ -121,7 +160,22 @@ nt_glowstone_generator:
           - "&8Generator Drop - Nether Tier 3"
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$900"
-
+    '1':
+      chance: 15
+      sell-value: 1800
+      commands: [ ]
+      item:
+        material: GLOWSTONE_DUST
+        display-name: "&eCondensed Glowstone Dust &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Nether Tier 3"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$1800"
+          - "&7"
+          - "&e&lCONDENSED DROP!"
 nt_quartz_generator:
   display-name: "&f&lQuartz Generator"
   world-type: NETHER
@@ -144,10 +198,13 @@ nt_quartz_generator:
     lore:
       - "&8Nether Generator - Tier 4"
       - "&7"
+      - "&7Possible Drops:"
+      - "&7&fQuartz &8(value: &a$1300&8)"
+      - "&7&fCondensed Quartz &8(value: &a$2600&8)"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
-      chance: 100
+      chance: 85
       sell-value: 1300
       commands: [ ]
       item:
@@ -160,7 +217,22 @@ nt_quartz_generator:
           - "&8Generator Drop - Nether Tier 4"
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$1300"
-
+    '1':
+      chance: 15
+      sell-value: 2600
+      commands: [ ]
+      item:
+        material: QUARTZ
+        display-name: "&fCondensed Quartz &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Nether Tier 4"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$2600"
+          - "&7"
+          - "&e&lCONDENSED DROP!"
 nt_magmacream_generator:
   display-name: "&c&lMagma Cream Generator"
   world-type: NETHER
@@ -183,10 +255,13 @@ nt_magmacream_generator:
     lore:
       - "&8Nether Generator - Tier 5"
       - "&7"
+      - "&7Possible Drops:"
+      - "&7&cMagma Cream &8(value: &a$1800&8)"
+      - "&7&cCondensed Magma Cream &8(value: &a$3600&8)"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
-      chance: 100
+      chance: 85
       sell-value: 1800
       commands: [ ]
       item:
@@ -199,7 +274,22 @@ nt_magmacream_generator:
           - "&8Generator Drop - Nether Tier 5"
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$1800"
-
+    '1':
+      chance: 15
+      sell-value: 3600
+      commands: [ ]
+      item:
+        material: MAGMA_CREAM
+        display-name: "&cCondensed Magma Cream &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Nether Tier 5"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$3600"
+          - "&7"
+          - "&e&lCONDENSED DROP!"
 nt_blazepowder_generator:
   display-name: "&e&lBlaze Powder Generator"
   world-type: NETHER
@@ -222,10 +312,13 @@ nt_blazepowder_generator:
     lore:
       - "&8Nether Generator - Tier 6"
       - "&7"
+      - "&7Possible Drops:"
+      - "&7&eBlaze Powder &8(value: &a$2500&8)"
+      - "&7&eCondensed Blaze Powder &8(value: &a$5000&8)"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
-      chance: 100
+      chance: 85
       sell-value: 2500
       commands: [ ]
       item:
@@ -238,7 +331,22 @@ nt_blazepowder_generator:
           - "&8Generator Drop - Nether Tier 6"
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$2500"
-
+    '1':
+      chance: 15
+      sell-value: 5000
+      commands: [ ]
+      item:
+        material: BLAZE_POWDER
+        display-name: "&eCondensed Blaze Powder &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Nether Tier 6"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$5000"
+          - "&7"
+          - "&e&lCONDENSED DROP!"
 nt_crimsonfungus_generator:
   display-name: "&c&lCrimson Fungus Generator"
   world-type: NETHER
@@ -261,10 +369,13 @@ nt_crimsonfungus_generator:
     lore:
       - "&8Nether Generator - Tier 7"
       - "&7"
+      - "&7Possible Drops:"
+      - "&7&cCrimson Fungus &8(value: &a$3400&8)"
+      - "&7&cCondensed Crimson Fungus &8(value: &a$6800&8)"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
-      chance: 100
+      chance: 85
       sell-value: 3400
       commands: [ ]
       item:
@@ -277,7 +388,22 @@ nt_crimsonfungus_generator:
           - "&8Generator Drop - Nether Tier 7"
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$3400"
-
+    '1':
+      chance: 15
+      sell-value: 6800
+      commands: [ ]
+      item:
+        material: CRIMSON_FUNGUS
+        display-name: "&cCondensed Crimson Fungus &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Nether Tier 7"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$6800"
+          - "&7"
+          - "&e&lCONDENSED DROP!"
 nt_nethergold_generator:
   display-name: "&6&lNether Gold Generator"
   world-type: NETHER
@@ -300,10 +426,13 @@ nt_nethergold_generator:
     lore:
       - "&8Nether Generator - Tier 8"
       - "&7"
+      - "&7Possible Drops:"
+      - "&7&6Gold Nugget &8(value: &a$4600&8)"
+      - "&7&6Condensed Gold Nugget &8(value: &a$9200&8)"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
-      chance: 100
+      chance: 85
       sell-value: 4600
       commands: [ ]
       item:
@@ -316,7 +445,22 @@ nt_nethergold_generator:
           - "&8Generator Drop - Nether Tier 8"
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$4600"
-
+    '1':
+      chance: 15
+      sell-value: 9200
+      commands: [ ]
+      item:
+        material: GOLD_NUGGET
+        display-name: "&6Condensed Gold Nugget &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Nether Tier 8"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$9200"
+          - "&7"
+          - "&e&lCONDENSED DROP!"
 nt_ancientdebris_generator:
   display-name: "&8&lAncient Debris Generator"
   world-type: NETHER
@@ -339,10 +483,13 @@ nt_ancientdebris_generator:
     lore:
       - "&8Nether Generator - Tier 9"
       - "&7"
+      - "&7Possible Drops:"
+      - "&7&8Ancient Debris &8(value: &a$6200&8)"
+      - "&7&8Condensed Ancient Debris &8(value: &a$12400&8)"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
-      chance: 100
+      chance: 85
       sell-value: 6200
       commands: [ ]
       item:
@@ -355,7 +502,22 @@ nt_ancientdebris_generator:
           - "&8Generator Drop - Nether Tier 9"
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$6200"
-
+    '1':
+      chance: 15
+      sell-value: 12400
+      commands: [ ]
+      item:
+        material: ANCIENT_DEBRIS
+        display-name: "&8Condensed Ancient Debris &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Nether Tier 9"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$12400"
+          - "&7"
+          - "&e&lCONDENSED DROP!"
 nt_netherite_generator:
   display-name: "&8&lNetherite Generator"
   world-type: NETHER
@@ -378,10 +540,13 @@ nt_netherite_generator:
     lore:
       - "&8Nether Generator - Tier 10"
       - "&7"
+      - "&7Possible Drops:"
+      - "&7&8Netherite Scrap &8(value: &a$8500&8)"
+      - "&7&8Condensed Netherite Scrap &8(value: &a$17000&8)"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
-      chance: 100
+      chance: 85
       sell-value: 8500
       commands: [ ]
       item:
@@ -394,3 +559,19 @@ nt_netherite_generator:
           - "&8Generator Drop - Nether Tier 10"
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$8500"
+    '1':
+      chance: 15
+      sell-value: 17000
+      commands: [ ]
+      item:
+        material: NETHERITE_SCRAP
+        display-name: "&8Condensed Netherite Scrap &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - Nether Tier 10"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$17000"
+          - "&7"
+          - "&e&lCONDENSED DROP!"

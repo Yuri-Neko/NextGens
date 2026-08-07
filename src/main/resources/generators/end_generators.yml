@@ -22,10 +22,13 @@ end_chorusfruit_generator:
     lore:
       - "&8The End Generator - Tier 1"
       - "&7"
+      - "&7Possible Drops:"
+      - "&7&dChorus Fruit &8(value: &a$11000&8)"
+      - "&7&dCondensed Chorus Fruit &8(value: &a$22000&8)"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
-      chance: 100
+      chance: 85
       sell-value: 11000
       commands: [ ]
       item:
@@ -38,7 +41,22 @@ end_chorusfruit_generator:
           - "&8Generator Drop - The End Tier 1"
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$11000"
-
+    '1':
+      chance: 15
+      sell-value: 22000
+      commands: [ ]
+      item:
+        material: CHORUS_FRUIT
+        display-name: "&dCondensed Chorus Fruit &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - The End Tier 1"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$22000"
+          - "&7"
+          - "&e&lCONDENSED DROP!"
 end_poppedchorus_generator:
   display-name: "&5&lPopped Chorus Fruit Generator"
   world-type: THE_END
@@ -59,10 +77,13 @@ end_poppedchorus_generator:
     lore:
       - "&8The End Generator - Tier 2"
       - "&7"
+      - "&7Possible Drops:"
+      - "&7&5Popped Chorus Fruit &8(value: &a$15000&8)"
+      - "&7&5Condensed Popped Chorus Fruit &8(value: &a$30000&8)"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
-      chance: 100
+      chance: 85
       sell-value: 15000
       commands: [ ]
       item:
@@ -75,7 +96,22 @@ end_poppedchorus_generator:
           - "&8Generator Drop - The End Tier 2"
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$15000"
-
+    '1':
+      chance: 15
+      sell-value: 30000
+      commands: [ ]
+      item:
+        material: POPPED_CHORUS_FRUIT
+        display-name: "&5Condensed Popped Chorus Fruit &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - The End Tier 2"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$30000"
+          - "&7"
+          - "&e&lCONDENSED DROP!"
 end_endstone_generator:
   display-name: "&f&lEnd Stone Generator"
   world-type: THE_END
@@ -96,10 +132,13 @@ end_endstone_generator:
     lore:
       - "&8The End Generator - Tier 3"
       - "&7"
+      - "&7Possible Drops:"
+      - "&7&fEnd Stone &8(value: &a$20000&8)"
+      - "&7&fCondensed End Stone &8(value: &a$40000&8)"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
-      chance: 100
+      chance: 85
       sell-value: 20000
       commands: [ ]
       item:
@@ -112,7 +151,22 @@ end_endstone_generator:
           - "&8Generator Drop - The End Tier 3"
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$20000"
-
+    '1':
+      chance: 15
+      sell-value: 40000
+      commands: [ ]
+      item:
+        material: END_STONE
+        display-name: "&fCondensed End Stone &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - The End Tier 3"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$40000"
+          - "&7"
+          - "&e&lCONDENSED DROP!"
 end_purpur_generator:
   display-name: "&d&lPurpur Generator"
   world-type: THE_END
@@ -133,10 +187,13 @@ end_purpur_generator:
     lore:
       - "&8The End Generator - Tier 4"
       - "&7"
+      - "&7Possible Drops:"
+      - "&7&dPurpur Block &8(value: &a$27000&8)"
+      - "&7&dCondensed Purpur Block &8(value: &a$54000&8)"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
-      chance: 100
+      chance: 85
       sell-value: 27000
       commands: [ ]
       item:
@@ -149,7 +206,22 @@ end_purpur_generator:
           - "&8Generator Drop - The End Tier 4"
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$27000"
-
+    '1':
+      chance: 15
+      sell-value: 54000
+      commands: [ ]
+      item:
+        material: PURPUR_BLOCK
+        display-name: "&dCondensed Purpur Block &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - The End Tier 4"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$54000"
+          - "&7"
+          - "&e&lCONDENSED DROP!"
 end_enderpearl_generator:
   display-name: "&2&lEnder Pearl Generator"
   world-type: THE_END
@@ -170,10 +242,13 @@ end_enderpearl_generator:
     lore:
       - "&8The End Generator - Tier 5"
       - "&7"
+      - "&7Possible Drops:"
+      - "&7&2Ender Pearl &8(value: &a$36000&8)"
+      - "&7&2Condensed Ender Pearl &8(value: &a$72000&8)"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
-      chance: 100
+      chance: 85
       sell-value: 36000
       commands: [ ]
       item:
@@ -186,7 +261,22 @@ end_enderpearl_generator:
           - "&8Generator Drop - The End Tier 5"
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$36000"
-
+    '1':
+      chance: 15
+      sell-value: 72000
+      commands: [ ]
+      item:
+        material: ENDER_PEARL
+        display-name: "&2Condensed Ender Pearl &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - The End Tier 5"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$72000"
+          - "&7"
+          - "&e&lCONDENSED DROP!"
 end_endereye_generator:
   display-name: "&2&lEnder Eye Generator"
   world-type: THE_END
@@ -207,10 +297,13 @@ end_endereye_generator:
     lore:
       - "&8The End Generator - Tier 6"
       - "&7"
+      - "&7Possible Drops:"
+      - "&7&2Eye of Ender &8(value: &a$48000&8)"
+      - "&7&2Condensed Eye of Ender &8(value: &a$96000&8)"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
-      chance: 100
+      chance: 85
       sell-value: 48000
       commands: [ ]
       item:
@@ -223,7 +316,22 @@ end_endereye_generator:
           - "&8Generator Drop - The End Tier 6"
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$48000"
-
+    '1':
+      chance: 15
+      sell-value: 96000
+      commands: [ ]
+      item:
+        material: ENDER_EYE
+        display-name: "&2Condensed Eye of Ender &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - The End Tier 6"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$96000"
+          - "&7"
+          - "&e&lCONDENSED DROP!"
 end_shulkershell_generator:
   display-name: "&5&lShulker Shell Generator"
   world-type: THE_END
@@ -244,10 +352,13 @@ end_shulkershell_generator:
     lore:
       - "&8The End Generator - Tier 7"
       - "&7"
+      - "&7Possible Drops:"
+      - "&7&5Shulker Shell &8(value: &a$65000&8)"
+      - "&7&5Condensed Shulker Shell &8(value: &a$130000&8)"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
-      chance: 100
+      chance: 85
       sell-value: 65000
       commands: [ ]
       item:
@@ -260,7 +371,22 @@ end_shulkershell_generator:
           - "&8Generator Drop - The End Tier 7"
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$65000"
-
+    '1':
+      chance: 15
+      sell-value: 130000
+      commands: [ ]
+      item:
+        material: SHULKER_SHELL
+        display-name: "&5Condensed Shulker Shell &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - The End Tier 7"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$130000"
+          - "&7"
+          - "&e&lCONDENSED DROP!"
 end_dragonbreath_generator:
   display-name: "&d&lDragon's Breath Generator"
   world-type: THE_END
@@ -281,10 +407,13 @@ end_dragonbreath_generator:
     lore:
       - "&8The End Generator - Tier 8"
       - "&7"
+      - "&7Possible Drops:"
+      - "&7&dDragon's Breath &8(value: &a$88000&8)"
+      - "&7&dCondensed Dragon's Breath &8(value: &a$176000&8)"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
-      chance: 100
+      chance: 85
       sell-value: 88000
       commands: [ ]
       item:
@@ -297,7 +426,22 @@ end_dragonbreath_generator:
           - "&8Generator Drop - The End Tier 8"
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$88000"
-
+    '1':
+      chance: 15
+      sell-value: 176000
+      commands: [ ]
+      item:
+        material: DRAGON_BREATH
+        display-name: "&dCondensed Dragon's Breath &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - The End Tier 8"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$176000"
+          - "&7"
+          - "&e&lCONDENSED DROP!"
 end_endcrystal_generator:
   display-name: "&f&lEnd Crystal Generator"
   world-type: THE_END
@@ -318,10 +462,13 @@ end_endcrystal_generator:
     lore:
       - "&8The End Generator - Tier 9"
       - "&7"
+      - "&7Possible Drops:"
+      - "&7&fEnd Crystal &8(value: &a$120000&8)"
+      - "&7&fCondensed End Crystal &8(value: &a$240000&8)"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
-      chance: 100
+      chance: 85
       sell-value: 120000
       commands: [ ]
       item:
@@ -334,7 +481,22 @@ end_endcrystal_generator:
           - "&8Generator Drop - The End Tier 9"
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$120000"
-
+    '1':
+      chance: 15
+      sell-value: 240000
+      commands: [ ]
+      item:
+        material: END_CRYSTAL
+        display-name: "&fCondensed End Crystal &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - The End Tier 9"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$240000"
+          - "&7"
+          - "&e&lCONDENSED DROP!"
 end_dragonegg_generator:
   display-name: "&5&lDragon Egg Generator"
   world-type: THE_END
@@ -355,10 +517,13 @@ end_dragonegg_generator:
     lore:
       - "&8The End Generator - Tier 10"
       - "&7"
+      - "&7Possible Drops:"
+      - "&7&5Dragon Egg &8(value: &a$500000&8)"
+      - "&7&5Condensed Dragon Egg &8(value: &a$1000000&8)"
       - "&7&oPlace down to activate the generator"
   drops:
     '0':
-      chance: 100
+      chance: 85
       sell-value: 500000
       commands: [ ]
       item:
@@ -371,3 +536,19 @@ end_dragonegg_generator:
           - "&8Generator Drop - The End Tier 10"
           - "&7"
           - "&7Use &a/sell &7to sell this for &a&n$500000"
+    '1':
+      chance: 15
+      sell-value: 1000000
+      commands: [ ]
+      item:
+        material: DRAGON_EGG
+        display-name: "&5Condensed Dragon Egg &a(/sell for money)"
+        enchantments: [ ]
+        flags: [ ]
+        custom-model-data: 0
+        lore:
+          - "&8Generator Drop - The End Tier 10"
+          - "&7"
+          - "&7Use &a/sell &7to sell this for &a&n$1000000"
+          - "&7"
+          - "&e&lCONDENSED DROP!"
