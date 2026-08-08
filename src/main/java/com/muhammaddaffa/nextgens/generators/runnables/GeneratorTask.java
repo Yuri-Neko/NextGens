@@ -16,6 +16,7 @@ import com.muhammaddaffa.nextgens.generators.Generator;
 import com.muhammaddaffa.nextgens.generators.managers.GeneratorManager;
 import com.muhammaddaffa.nextgens.hooks.armor.ArmorSpeedHook;
 import com.muhammaddaffa.nextgens.hooks.levels.NextGensLevelsHook;
+import com.muhammaddaffa.nextgens.hooks.pets.PetsSpeedHook;
 import com.muhammaddaffa.nextgens.users.models.User;
 import com.muhammaddaffa.nextgens.users.UserManager;
 import com.muhammaddaffa.nextgens.utils.GensRunnable;
@@ -156,6 +157,15 @@ public class GeneratorTask extends GensRunnable {
             double prestigeSpeedPercent = NextGensLevelsHook.getSpeedBonusPercent(active.getOwner());
             if (prestigeSpeedPercent > 0) {
                 double discount = (generator.interval() * prestigeSpeedPercent) / 100;
+                interval -= discount;
+            }
+            /**
+             * NextPets speed bonus (lewat reflection, opsional) - nyala kalau player
+             * lagi pakai pet SPEED - lihat PetsSpeedHook untuk detail.
+             */
+            double petsSpeedPercent = PetsSpeedHook.getSpeedBonusPercent(active.getOwner());
+            if (petsSpeedPercent > 0) {
+                double discount = (generator.interval() * petsSpeedPercent) / 100;
                 interval -= discount;
             }
             /**
